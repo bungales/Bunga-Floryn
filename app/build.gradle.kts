@@ -4,11 +4,7 @@ plugins {
 
 android {
     namespace = "com.example.bunga_floryn"
-    compileSdk {
-        version = release(36) {
-            minorApiLevel = 1
-        }
-    }
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.example.bunga_floryn"
@@ -29,9 +25,15 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
+    }
+
+    // INI UNTUK VIEWBINDING
+    buildFeatures {
+        viewBinding = true
     }
 }
 

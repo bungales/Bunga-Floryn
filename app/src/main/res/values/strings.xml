@@ -1,3 +1,16 @@
 <resources>
+    <!-- Nama app bawaan Anda (tetap dipertahankan) -->
     <string name="app_name">Bunga-Floryn</string>
+
+    <!-- Teks tambahan untuk halaman Login -->
+    <string name="welcome_title">Welcome</string>
+    <string name="welcome_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
+    <string name="email_hint">Email or Mobile Number</string>
+    <string name="password_hint">Password</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="login_btn">Log In</string>
+    <string name="signup_btn">Sign Up</string>
+    <string name="or_signup">or sign up with</string>
+    <string name="dont_have_account">Don\'t have an account? </string>
+    <string name="sign_up">Sign Up</string>
 </resources>
