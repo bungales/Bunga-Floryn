@@ -13,53 +13,82 @@
         android:padding="24dp"
         android:gravity="center_horizontal">
 
-        <ImageView
-            android:id="@+id/ivLogo"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/ic_healthtrack"
-            android:layout_marginTop="40dp"
-            android:layout_marginBottom="16dp" />
+        <!-- Logo -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            app:cardCornerRadius="55dp"
+            app:cardElevation="8dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="16dp">
 
+            <ImageView
+                android:id="@+id/ivLogo"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ic_healthtrack"
+                android:layout_gravity="center" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- JUDUL APPS (dengan Custom Font) -->
         <TextView
             android:id="@+id/tvAppTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="HealthTrack"
-            android:textSize="32sp"
+            android:textSize="34sp"
             android:textColor="@color/primary_dark"
-            android:fontFamily="@font/inter_variabel_opsz_wght.ttf"
+            android:fontFamily="@font/inter_variablefont_opsz_wght"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Subtitle Apps -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pantau kesehatan Anda, hidup lebih baik"
+            android:textSize="14sp"
+            android:textColor="@color/text_light"
+            android:fontFamily="@font/inter_variablefont_opsz_wght"
             android:layout_marginBottom="32dp" />
 
+        <!-- DESKRIPSI SELAMAT DATANG (dengan Custom Font) -->
         <TextView
             android:id="@+id/tvWelcomeTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Welcome"
-            android:textSize="28sp"
+            android:text="Welcome Back!"
+            android:textSize="24sp"
             android:textColor="@color/text_dark"
-            android:fontFamily="@font/inter_variabel_opsz_wght.ttf"
-            android:layout_marginBottom="12dp"
+            android:fontFamily="@font/inter_variablefont_opsz_wght"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"
             android:layout_gravity="start" />
 
+        <!-- DESKRIPSI SELAMAT DATANG (teks panjang dengan Custom Font) -->
         <TextView
             android:id="@+id/tvDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/welcome_desc"
+            android:text="Sesungguhnya, sakit itu sendiri penting, akan tetapi sebagian dari kita mungkin mengabaikannya. Tidak ada yang suka pada kesakitan, tidak juga mencarinya, namun karena itu semua terjadi secara alami. Kita mungkin pernah merasakan sakit yang luar biasa, dan itu semua akan berlalu."
             android:textSize="14sp"
             android:textColor="@color/text_light"
-            android:fontFamily="@font/inter_variabel_opsz_wght.ttf"
-            android:layout_marginBottom="32dp"
+            android:fontFamily="@font/inter_variablefont_opsz_wght"
+            android:layout_marginBottom="28dp"
             android:lineSpacingExtra="4dp" />
 
+        <!-- Input Email -->
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/email_hint"
+            android:hint="Email or Mobile Number"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             app:boxStrokeColor="@color/primary_blue"
             app:hintTextColor="@color/primary_blue"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"
             android:layout_marginBottom="16dp">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -67,18 +96,23 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
-                android:fontFamily="@font/inter_variabel_opsz_wght.ttf"
+                android:fontFamily="@font/inter_variablefont_opsz_wght"
                 android:text="example@example.com" />
         </com.google.android.material.textfield.TextInputLayout>
 
+        <!-- Input Password -->
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/password_hint"
+            android:hint="Password"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             app:boxStrokeColor="@color/primary_blue"
             app:hintTextColor="@color/primary_blue"
             app:endIconMode="password_toggle"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"
             android:layout_marginBottom="8dp">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -86,77 +120,91 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
-                android:fontFamily="@font/inter_regular"
+                android:fontFamily="@font/inter_variablefont_opsz_wght"
                 android:text="**********" />
         </com.google.android.material.textfield.TextInputLayout>
 
+        <!-- Forgot Password -->
         <TextView
             android:id="@+id/tvForgotPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/forgot_password"
-            android:textSize="14sp"
+            android:text="Forgot Password?"
+            android:textSize="13sp"
             android:textColor="@color/primary_blue"
-            android:fontFamily="@font/inter_medium"
+            android:fontFamily="@font/inter_variablefont_opsz_wght"
             android:textAlignment="textEnd"
-            android:layout_marginBottom="32dp" />
+            android:layout_marginBottom="28dp" />
 
+        <!-- Tombol Log In -->
         <Button
             android:id="@+id/btnLogin"
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:text="@string/login_btn"
+            android:text="Log In"
             android:textSize="16sp"
-            android:fontFamily="@font/inter_semibold"
+            android:fontFamily="@font/inter_variablefont_opsz_wght"
+            android:textStyle="bold"
             android:backgroundTint="@color/primary_blue"
             android:textColor="@color/white"
-            app:cornerRadius="12dp"
-            android:layout_marginBottom="24dp" />
+            app:cornerRadius="28dp"
+            android:layout_marginBottom="20dp" />
 
+        <!-- or sign up with -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/or_signup"
-            android:textSize="14sp"
+            android:text="──────────  or sign up with  ──────────"
+            android:textSize="12sp"
             android:textColor="@color/text_light"
-            android:fontFamily="@font/inter_regular"
+            android:fontFamily="@font/inter_variablefont_opsz_wght"
             android:textAlignment="center"
-            android:layout_marginBottom="16dp" />
+            android:layout_marginBottom="20dp" />
 
+        <!-- Tombol Sign Up -->
         <Button
             android:id="@+id/btnSignUp"
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:text="@string/signup_btn"
+            android:text="Sign Up"
             android:textSize="16sp"
-            android:fontFamily="@font/inter_medium"
+            android:fontFamily="@font/inter_variablefont_opsz_wght"
             android:backgroundTint="@color/gray_light"
             android:textColor="@color/primary_blue"
-            app:cornerRadius="12dp"
+            app:cornerRadius="28dp"
             android:layout_marginBottom="24dp" />
 
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/border"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Don't have an account? Sign Up -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="16dp">
+            android:layout_marginBottom="20dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/dont_have_account"
+                android:text="Don't have an account? "
                 android:textSize="14sp"
                 android:textColor="@color/text_light"
-                android:fontFamily="@font/inter_regular" />
+                android:fontFamily="@font/inter_variablefont_opsz_wght"/>
 
             <TextView
                 android:id="@+id/tvSignUpLink"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/sign_up"
+                android:text="Sign Up"
                 android:textSize="14sp"
                 android:textColor="@color/primary_blue"
-                android:fontFamily="@font/inter_semibold" />
+                android:fontFamily="@font/inter_variablefont_opsz_wght"
+                android:textStyle="bold" />
         </LinearLayout>
 
     </LinearLayout>

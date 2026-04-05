@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardCornerRadius="24dp"
-        app:cardElevation="4dp"
+        app:cardElevation="8dp"
         android:layout_margin="16dp">
 
         <LinearLayout
@@ -22,53 +22,75 @@
             android:padding="40dp"
             android:gravity="center">
 
-            <ImageView
-                android:id="@+id/ivLogo"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/ic_healthtrack"
-                android:layout_marginBottom="24dp" />
+            <!-- Logo dengan background card bulat -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                app:cardCornerRadius="55dp"
+                app:cardElevation="8dp"
+                android:layout_marginBottom="20dp">
 
+                <ImageView
+                    android:id="@+id/ivLogo"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_healthtrack"
+                    android:layout_gravity="center" />
+            </androidx.cardview.widget.CardView>
+
+            <!-- JUDUL APPS (dengan Custom Font) -->
             <TextView
                 android:id="@+id/tvAppTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="HealthTrack"
-                android:textSize="28sp"
+                android:textSize="32sp"
                 android:textColor="@color/primary_dark"
-                android:fontFamily="@font/inter_bold"
-                android:layout_marginBottom="16dp" />
+                android:fontFamily="@font/inter_variablefont_opsz_wght"
+                android:textStyle="bold"
+                android:layout_marginBottom="12dp" />
 
+            <!-- SELAMAT DATANG (dengan Custom Font) -->
             <TextView
                 android:id="@+id/tvWelcomeMessage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Selamat Datang,"
-                android:textSize="20sp"
-                android:textColor="@color/text_dark"
-                android:fontFamily="@font/inter_regular"
-                android:layout_marginBottom="8dp" />
+                android:textSize="18sp"
+                android:textColor="@color/text_light"
+                android:fontFamily="@font/inter_variablefont_opsz_wght"
+                android:layout_marginBottom="4dp" />
 
+            <!-- USERNAME (dengan Custom Font) -->
             <TextView
                 android:id="@+id/tvUsername"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="User"
-                android:textSize="24sp"
+                android:textSize="28sp"
                 android:textColor="@color/primary_blue"
-                android:fontFamily="@font/inter_bold"
-                android:layout_marginBottom="16dp" />
+                android:fontFamily="@font/inter_variablefont_opsz_wght"
+                android:textStyle="bold"
+                android:layout_marginBottom="20dp" />
 
+            <!-- Garis pemisah (divider) -->
+            <View
+                android:layout_width="60dp"
+                android:layout_height="3dp"
+                android:background="@color/primary_blue"
+                android:layout_marginBottom="20dp" />
+
+            <!-- DESKRIPSI (dengan Custom Font) -->
             <TextView
                 android:id="@+id/tvDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                android:text="Sesungguhnya, sakit itu sendiri penting, akan tetapi sebagian dari kita mungkin mengabaikannya. Tidak ada yang suka pada kesakitan, tidak juga mencarinya, namun karena itu semua terjadi secara alami. Kita mungkin pernah merasakan sakit yang luar biasa, dan itu semua akan berlalu."
                 android:textSize="14sp"
                 android:textColor="@color/text_light"
-                android:fontFamily="@font/inter_regular"
+                android:fontFamily="@font/inter_variablefont_opsz_wght"
                 android:textAlignment="center"
-                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
                 android:lineSpacingExtra="4dp" />
 
         </LinearLayout>
