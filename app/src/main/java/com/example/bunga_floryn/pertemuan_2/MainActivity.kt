@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var btnHitungBola: Button
     private lateinit var tvHasilSegitiga: TextView
     private lateinit var tvHasilBola: TextView
+    private lateinit var btnKembali: Button  // <==== TAMBAHKAN INI
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,11 +36,17 @@ class MainActivity : AppCompatActivity() {
         btnHitungBola = findViewById(R.id.btn_hitung_bola)
         tvHasilSegitiga = findViewById(R.id.tv_hasil_segitiga)
         tvHasilBola = findViewById(R.id.tv_hasil_bola)
+        btnKembali = findViewById(R.id.btnKembali)  // <==== TAMBAHKAN INI
     }
 
     private fun setupClickListeners() {
         btnHitungSegitiga.setOnClickListener { hitungLuasSegitiga() }
         btnHitungBola.setOnClickListener { hitungVolumeBola() }
+
+        // <==== TAMBAHKAN INI UNTUK TOMBOL KEMBALI
+        btnKembali.setOnClickListener {
+            finish()  // Menutup activity ini dan kembali ke halaman sebelumnya
+        }
     }
 
     private fun hitungLuasSegitiga() {

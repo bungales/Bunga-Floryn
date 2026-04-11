@@ -15,6 +15,18 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <!-- Tombol Kembali (DITAMBAHKAN) -->
+            <Button
+                android:id="@+id/btnKembali"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="←  Kembali"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:backgroundTint="#757575"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="16dp" />
+
             <!-- Header -->
             <LinearLayout
                 android:layout_width="match_parent"

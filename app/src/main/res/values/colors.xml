@@ -1,13 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!-- ===== TEMA UTAMA HEALTHTRACK (HIJAU MUDA) ===== -->
 
-    <color name="primary_blue">#4CAF50</color>      <!-- Tombol Login (Hijau) -->
-    <color name="primary_dark">#2E7D32</color>      <!-- Judul -->
+    <!-- Warna Primary (Hijau Muda Kesehatan) -->
+    <color name="primary_blue">#4CAF50</color>
+    <color name="primary_dark">#388E3C</color>
+    <color name="primary_light">#81C784</color>
+
+    <!-- Warna Secondary/Aksen -->
+    <color name="purple_primary">#9C27B0</color>
+    <color name="purple_dark">#6A1B9A</color>
+    <color name="orange_accent">#FF9800</color>
+    <color name="teal_200">#00897B</color>
+
+    <!-- Warna Background -->
+    <color name="background">#F5F7FA</color>
+    <color name="card_background">#FFFFFF</color>
+
+    <!-- Warna Text -->
     <color name="text_dark">#333333</color>
     <color name="text_light">#757575</color>
-    <color name="background">#FFFFFF</color>
-    <color name="border">#E0E0E0</color>
-    <color name="gray_light">#F5F5F5</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <!-- Warna Status/Feedback -->
+    <color name="green_success">#4CAF50</color>
+    <color name="red_error">#F44336</color>
+    <color name="yellow_warning">#FFC107</color>
+
+    <!-- Warna Border & Divider -->
+    <color name="gray_light">#E0E0E0</color>
+    <color name="border">#BDBDBD</color>
+
+    <!-- Warna Tambahan untuk Custom Screen -->
+    <color name="blue_soft">#E8F5E9</color>
+    <color name="green_soft">#E8F5E9</color>
+    <color name="purple_soft">#F3E5F5</color>
+    <color name="orange_soft">#FFF3E0</color>
 </resources>
