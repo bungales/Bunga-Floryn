@@ -12,20 +12,22 @@ class CustomActivity2 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_custom2)
 
-        android.util.Log.e("onCreate", "CustomActivity2 dibuat pertama kali")
+        // Ambil data dari Intent (dikirim dari WelcomeActivity)
+        val judul = intent.getStringExtra("judul_halaman") ?: "Tips Sehat"
+        val deskripsi = intent.getStringExtra("deskripsi") ?: "Terapkan gaya hidup sehat setiap hari"
 
-        val tvJudulHalaman = findViewById<TextView>(R.id.tvJudulHalaman)
-        val tvDeskripsiDariUtama = findViewById<TextView>(R.id.tvDeskripsiDariUtama)
-        val tvInfoTambahan = findViewById<TextView>(R.id.tvInfoTambahan)
+        // Hubungkan dengan TextView di XML
+        val tvJudul = findViewById<TextView>(R.id.tvJudulHalaman)
+        val tvDeskripsi = findViewById<TextView>(R.id.tvDeskripsiDariUtama)
+        val tvInfo = findViewById<TextView>(R.id.tvInfoTambahan)
         val btnKembali = findViewById<Button>(R.id.btnKembali)
 
-        val judul = intent.getStringExtra("judul_halaman") ?: "Custom Screen 2"
-        val deskripsi = intent.getStringExtra("deskripsi") ?: "Desain Figma"
+        // Set teks
+        tvJudul.text = judul
+        tvDeskripsi.text = deskripsi
+        tvInfo.text = "💧 Minum air 8 gelas per hari\n🏃 Olahraga 30 menit setiap hari\n😴 Tidur cukup 7-8 jam\n🥗 Makan makanan bergizi seimbang"
 
-        tvJudulHalaman.text = judul
-        tvDeskripsiDariUtama.text = deskripsi
-        tvInfoTambahan.text = "Ini adalah halaman custom kedua.\nDesain berbeda dengan warna dan ilustrasi yang berbeda."
-
+        // Tombol kembali
         btnKembali.setOnClickListener {
             finish()
         }

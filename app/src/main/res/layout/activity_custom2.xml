@@ -32,9 +32,9 @@
                 android:id="@+id/tvJudulHalaman"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Custom Screen 2"
+                android:text="Tips Sehat"
                 android:textSize="28sp"
-                android:textColor="@color/orange_accent"
+                android:textColor="@color/primary_blue"
                 android:fontFamily="@font/inter_variablefont_opsz_wght"
                 android:textStyle="bold"
                 android:layout_marginBottom="12dp" />
@@ -43,7 +43,7 @@
                 android:id="@+id/tvDeskripsiDariUtama"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Deskripsi dari halaman utama"
+                android:text="Terapkan gaya hidup sehat setiap hari"
                 android:textSize="14sp"
                 android:textColor="@color/text_light"
                 android:layout_marginBottom="20dp" />
@@ -51,25 +51,26 @@
             <View
                 android:layout_width="60dp"
                 android:layout_height="2dp"
-                android:background="@color/orange_accent"
+                android:background="@color/primary_blue"
                 android:layout_marginBottom="20dp" />
 
             <TextView
                 android:id="@+id/tvInfoTambahan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Informasi tambahan"
+                android:text="💧 Minum air 8 gelas per hari\n🏃 Olahraga 30 menit setiap hari\n😴 Tidur cukup 7-8 jam\n🥗 Makan makanan bergizi seimbang"
                 android:textSize="14sp"
                 android:textColor="@color/text_dark"
                 android:gravity="center"
-                android:layout_marginBottom="24dp" />
+                android:layout_marginBottom="24dp"
+                android:lineSpacingExtra="6dp" />
 
             <Button
                 android:id="@+id/btnKembali"
                 android:layout_width="wrap_content"
                 android:layout_height="48dp"
                 android:text="Kembali"
-                android:backgroundTint="@color/orange_accent"
+                android:backgroundTint="@color/primary_blue"
                 android:textColor="@color/white"
                 app:cornerRadius="24dp" />
 

@@ -12,33 +12,24 @@ class CustomActivity1 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_custom1)
 
-        android.util.Log.e("onCreate", "CustomActivity1 dibuat pertama kali")
+        // Ambil data dari Intent (dikirim dari WelcomeActivity)
+        val judul = intent.getStringExtra("judul_halaman") ?: "Cek Kesehatan"
+        val deskripsi = intent.getStringExtra("deskripsi") ?: "Pantau kondisi kesehatanmu setiap hari"
 
-        val tvJudulHalaman = findViewById<TextView>(R.id.tvJudulHalaman)
-        val tvDeskripsiDariUtama = findViewById<TextView>(R.id.tvDeskripsiDariUtama)
-        val tvInfoTambahan = findViewById<TextView>(R.id.tvInfoTambahan)
+        // Hubungkan dengan TextView di XML
+        val tvJudul = findViewById<TextView>(R.id.tvJudulHalaman)
+        val tvDeskripsi = findViewById<TextView>(R.id.tvDeskripsiDariUtama)
+        val tvInfo = findViewById<TextView>(R.id.tvInfoTambahan)
         val btnKembali = findViewById<Button>(R.id.btnKembali)
 
-        // Ambil data dari WelcomeActivity
-        val judul = intent.getStringExtra("judul_halaman") ?: "Custom Screen 1"
-        val deskripsi = intent.getStringExtra("deskripsi") ?: "Desain Figma"
+        // Set teks
+        tvJudul.text = judul
+        tvDeskripsi.text = deskripsi
+        tvInfo.text = "✅ Cek Berat Badan\n✅ Cek Tekanan Darah\n✅ Catat Riwayat Penyakit\n✅ Konsultasi dengan Dokter"
 
-        tvJudulHalaman.text = judul
-        tvDeskripsiDariUtama.text = deskripsi
-        tvInfoTambahan.text = "Ini adalah halaman custom pertama.\nDesain sesuai Figma dengan gambar dan teks."
-
+        // Tombol kembali
         btnKembali.setOnClickListener {
             finish()
         }
-    }
-
-    override fun onStart() {
-        super.onStart()
-        android.util.Log.e("onStart", "CustomActivity1 terlihat di layar")
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        android.util.Log.e("onDestroy", "CustomActivity1 dihapus dari stack")
     }
 }
