@@ -66,18 +66,19 @@
             android:layout_gravity="start" />
 
         <!-- DESKRIPSI SELAMAT DATANG (teks panjang dengan Custom Font) -->
+
+        <!-- Input Email -->
         <TextView
             android:id="@+id/tvDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Sesungguhnya, sakit itu sendiri penting, akan tetapi sebagian dari kita mungkin mengabaikannya. Tidak ada yang suka pada kesakitan, tidak juga mencarinya, namun karena itu semua terjadi secara alami. Kita mungkin pernah merasakan sakit yang luar biasa, dan itu semua akan berlalu."
-            android:textSize="14sp"
-            android:textColor="@color/text_light"
-            android:fontFamily="@font/inter_variablefont_opsz_wght"
             android:layout_marginBottom="28dp"
-            android:lineSpacingExtra="4dp" />
+            android:fontFamily="@font/inter_variablefont_opsz_wght"
+            android:lineSpacingExtra="4dp"
+            android:text="Sesungguhnya, sakit itu sendiri penting, akan tetapi sebagian dari kita mungkin mengabaikannya. Tidak ada yang suka pada kesakitan, tidak juga mencarinya, namun karena itu semua terjadi secara alami. Kita mungkin pernah merasakan sakit yang luar biasa, dan itu semua akan berlalu."
+            android:textColor="@color/text_light"
+            android:textSize="14sp" />
 
-        <!-- Input Email -->
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

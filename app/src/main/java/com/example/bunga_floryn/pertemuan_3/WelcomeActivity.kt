@@ -74,7 +74,6 @@ class WelcomeActivity : AppCompatActivity() {
     }
 
     private fun showLogoutConfirmation() {
-        // Menggunakan MaterialAlertDialogBuilder seperti materi dosen
         com.google.android.material.dialog.MaterialAlertDialogBuilder(this)
             .setTitle("Konfirmasi Logout")
             .setMessage("Apakah Anda yakin ingin logout?")
@@ -101,13 +100,10 @@ class WelcomeActivity : AppCompatActivity() {
             }
             .show()
     }
-
-    // Lifecycle Logs sesuai materi dosen
     override fun onStart() {
         super.onStart()
         android.util.Log.e("onStart", "WelcomeActivity terlihat di layar")
     }
-
     override fun onDestroy() {
         super.onDestroy()
         android.util.Log.e("onDestroy", "WelcomeActivity dihapus dari stack")
