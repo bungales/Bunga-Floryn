@@ -2,7 +2,8 @@ package com.example.bunga_floryn.pertemuan_4
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
+import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
 import com.example.bunga_floryn.R
 
@@ -19,17 +20,13 @@ class CustomActivity2 : AppCompatActivity() {
         // Hubungkan dengan TextView di XML
         val tvJudul = findViewById<TextView>(R.id.tvJudulHalaman)
         val tvDeskripsi = findViewById<TextView>(R.id.tvDeskripsiDariUtama)
-        val tvInfo = findViewById<TextView>(R.id.tvInfoTambahan)
-        val btnKembali = findViewById<Button>(R.id.btnKembali)
+        val btnBack = findViewById<ImageView>(R.id.btnBack)
+        val btnKembali = findViewById<LinearLayout>(R.id.btnKembali)
 
-        // Set teks
         tvJudul.text = judul
         tvDeskripsi.text = deskripsi
-        tvInfo.text = "💧 Minum air 8 gelas per hari\n🏃 Olahraga 30 menit setiap hari\n😴 Tidur cukup 7-8 jam\n🥗 Makan makanan bergizi seimbang"
 
-        // Tombol kembali
-        btnKembali.setOnClickListener {
-            finish()
-        }
+        btnBack.setOnClickListener { finish() }
+        btnKembali.setOnClickListener { finish() }
     }
 }
