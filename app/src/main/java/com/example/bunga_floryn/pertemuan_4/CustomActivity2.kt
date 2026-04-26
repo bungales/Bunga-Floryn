@@ -1,11 +1,14 @@
 package com.example.bunga_floryn.pertemuan_4
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
-import android.widget.ImageView
-import android.widget.LinearLayout
+import android.view.MenuItem
+import android.widget.Button
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import com.example.bunga_floryn.R
+import com.example.bunga_floryn.pertemuan_5.WebViewActivity
 
 class CustomActivity2 : AppCompatActivity() {
 
@@ -13,20 +16,32 @@ class CustomActivity2 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_custom2)
 
-        // Ambil data dari Intent (dikirim dari WelcomeActivity)
-        val judul = intent.getStringExtra("judul_halaman") ?: "Tips Sehat"
-        val deskripsi = intent.getStringExtra("deskripsi") ?: "Terapkan gaya hidup sehat setiap hari"
+        val judul = intent.getStringExtra("judul_halaman") ?: "Home Dashboard"
+        val deskripsi = intent.getStringExtra("deskripsi") ?: "Terapkan gaya hidup sehat"
 
-        // Hubungkan dengan TextView di XML
-        val tvJudul = findViewById<TextView>(R.id.tvJudulHalaman)
-        val tvDeskripsi = findViewById<TextView>(R.id.tvDeskripsiDariUtama)
-        val btnBack = findViewById<ImageView>(R.id.btnBack)
-        val btnKembali = findViewById<LinearLayout>(R.id.btnKembali)
+        val toolbar = findViewById<Toolbar>(R.id.toolbar)
+        setSupportActionBar(toolbar)
+        supportActionBar?.apply {
+            title = judul
+            setDisplayHomeAsUpEnabled(true)
+            setDisplayShowHomeEnabled(true)
+        }
 
-        tvJudul.text = judul
-        tvDeskripsi.text = deskripsi
+        findViewById<TextView>(R.id.tvJudulHalaman).text = judul
+        findViewById<TextView>(R.id.tvDeskripsiDariUtama).text = deskripsi
 
-        btnBack.setOnClickListener { finish() }
-        btnKembali.setOnClickListener { finish() }
+        findViewById<Button>(R.id.btnWebView).setOnClickListener {
+            startActivity(Intent(this, WebViewActivity::class.java))
+        }
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            android.R.id.home -> {
+                onBackPressedDispatcher.onBackPressed()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 }

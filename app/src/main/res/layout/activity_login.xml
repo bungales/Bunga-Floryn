@@ -17,7 +17,7 @@
             android:layout_height="260dp"
             android:orientation="vertical"
             android:gravity="center"
-            android:background="#00BCD4"
+            android:background="#1565C0"
             android:paddingBottom="32dp">
 
             <!-- Logo circle -->
@@ -33,8 +33,8 @@
                     android:id="@+id/ivLogo"
                     android:layout_width="56dp"
                     android:layout_height="56dp"
-                    android:src="@drawable/ic_healthtrack"
-                    android:tint="#00BCD4"
+                    android:src="@drawable/ic_ruangku_logo"
+                    android:scaleType="fitCenter"
                     android:layout_gravity="center" />
             </androidx.cardview.widget.CardView>
 
@@ -54,7 +54,7 @@
                 android:layout_height="wrap_content"
                 android:text="Pantau kesehatan Anda, hidup lebih baik"
                 android:textSize="13sp"
-                android:textColor="#E0F7FA"
+                android:textColor="#E3EEFF"
                 android:fontFamily="@font/inter_variablefont_opsz_wght" />
         </LinearLayout>
 
@@ -82,7 +82,7 @@
                     android:layout_height="wrap_content"
                     android:text="Welcome Back!"
                     android:textSize="22sp"
-                    android:textColor="#00BCD4"
+                    android:textColor="#1565C0"
                     android:fontFamily="@font/inter_variablefont_opsz_wght"
                     android:textStyle="bold"
                     android:layout_marginBottom="4dp" />
@@ -93,7 +93,7 @@
                     android:layout_height="wrap_content"
                     android:text="Masuk untuk melanjutkan perjalanan sehatmu"
                     android:textSize="13sp"
-                    android:textColor="#90A4AE"
+                    android:textColor="#757575"
                     android:fontFamily="@font/inter_variablefont_opsz_wght"
                     android:layout_marginBottom="24dp" />
 
@@ -103,8 +103,8 @@
                     android:layout_height="wrap_content"
                     android:hint="Email or Mobile Number"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    app:boxStrokeColor="#00BCD4"
-                    app:hintTextColor="#00BCD4"
+                    app:boxStrokeColor="#1565C0"
+                    app:hintTextColor="#1565C0"
                     app:boxCornerRadiusTopStart="12dp"
                     app:boxCornerRadiusTopEnd="12dp"
                     app:boxCornerRadiusBottomStart="12dp"
@@ -126,8 +126,8 @@
                     android:layout_height="wrap_content"
                     android:hint="Password"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    app:boxStrokeColor="#00BCD4"
-                    app:hintTextColor="#00BCD4"
+                    app:boxStrokeColor="#1565C0"
+                    app:hintTextColor="#1565C0"
                     app:endIconMode="password_toggle"
                     app:boxCornerRadiusTopStart="12dp"
                     app:boxCornerRadiusTopEnd="12dp"
@@ -151,7 +151,7 @@
                     android:layout_height="wrap_content"
                     android:text="Forgot Password?"
                     android:textSize="12sp"
-                    android:textColor="#00BCD4"
+                    android:textColor="#1565C0"
                     android:fontFamily="@font/inter_variablefont_opsz_wght"
                     android:textAlignment="textEnd"
                     android:layout_marginBottom="24dp" />
@@ -165,7 +165,7 @@
                     android:textSize="15sp"
                     android:fontFamily="@font/inter_variablefont_opsz_wght"
                     android:textStyle="bold"
-                    android:backgroundTint="#00BCD4"
+                    android:backgroundTint="#1565C0"
                     android:textColor="#FFFFFF"
                     app:cornerRadius="26dp"
                     android:layout_marginBottom="16dp" />
@@ -182,7 +182,7 @@
                         android:layout_weight="1" android:background="#E0E0E0" />
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                         android:text="  or sign up with  " android:textSize="12sp"
-                        android:textColor="#90A4AE" android:fontFamily="@font/inter_variablefont_opsz_wght" />
+                        android:textColor="#757575" android:fontFamily="@font/inter_variablefont_opsz_wght" />
                     <View android:layout_width="0dp" android:layout_height="1dp"
                         android:layout_weight="1" android:background="#E0E0E0" />
                 </LinearLayout>
@@ -195,8 +195,8 @@
                     android:text="Sign Up"
                     android:textSize="15sp"
                     android:fontFamily="@font/inter_variablefont_opsz_wght"
-                    android:backgroundTint="#E0F7FA"
-                    android:textColor="#00BCD4"
+                    android:backgroundTint="#E3EEFF"
+                    android:textColor="#1565C0"
                     app:cornerRadius="26dp"
                     android:layout_marginBottom="20dp" />
 
@@ -212,7 +212,7 @@
                         android:layout_height="wrap_content"
                         android:text="Don't have an account? "
                         android:textSize="13sp"
-                        android:textColor="#90A4AE"
+                        android:textColor="#757575"
                         android:fontFamily="@font/inter_variablefont_opsz_wght" />
 
                     <TextView
@@ -221,7 +221,7 @@
                         android:layout_height="wrap_content"
                         android:text="Sign Up"
                         android:textSize="13sp"
-                        android:textColor="#00BCD4"
+                        android:textColor="#1565C0"
                         android:fontFamily="@font/inter_variablefont_opsz_wght"
                         android:textStyle="bold" />
                 </LinearLayout>
@@ -231,3 +231,5 @@
 
     </LinearLayout>
 </ScrollView>
+
+

@@ -6,6 +6,14 @@
     android:orientation="vertical"
     android:background="#F0FAFA">
 
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:titleTextColor="@android:color/white" />
+
     <!-- Top Bar -->
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,7 +22,7 @@
         android:gravity="center_vertical"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
-        android:paddingTop="40dp"
+        android:paddingTop="16dp"
         android:paddingBottom="12dp"
         android:background="#F0FAFA">
 
@@ -24,8 +32,8 @@
             android:layout_width="36dp"
             android:layout_height="36dp"
             android:src="@android:drawable/ic_media_previous"
-            android:tint="#00BCD4"
-            android:background="#E0F7FA"
+            
+            android:background="#E3EEFF"
             android:padding="6dp"
             android:layout_marginEnd="8dp" />
 
@@ -33,21 +41,21 @@
             android:layout_width="22dp"
             android:layout_height="22dp"
             android:src="@android:drawable/ic_lock_silent_mode_off"
-            android:tint="#00BCD4"
+            
             android:layout_marginEnd="12dp" />
 
         <ImageView
             android:layout_width="22dp"
             android:layout_height="22dp"
             android:src="@android:drawable/ic_menu_preferences"
-            android:tint="#00BCD4"
+            
             android:layout_marginEnd="12dp" />
 
         <ImageView
             android:layout_width="22dp"
             android:layout_height="22dp"
             android:src="@android:drawable/ic_menu_search"
-            android:tint="#00BCD4" />
+             />
 
         <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" />
 
@@ -79,7 +87,7 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:src="@android:drawable/ic_menu_myplaces"
-            android:tint="#00BCD4" />
+             />
     </LinearLayout>
 
     <ScrollView
@@ -109,7 +117,7 @@
                     android:layout_weight="1"
                     android:text="Categories"
                     android:textSize="16sp"
-                    android:textColor="#00BCD4"
+                    android:textColor="#1565C0"
                     android:textStyle="bold" />
 
                 <TextView
@@ -117,7 +125,7 @@
                     android:layout_height="wrap_content"
                     android:text="See all"
                     android:textSize="12sp"
-                    android:textColor="#00BCD4" />
+                    android:textColor="#1565C0" />
             </LinearLayout>
 
             <!-- Category Icons Row -->
@@ -133,7 +141,7 @@
                 <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
                     android:layout_weight="1" android:orientation="vertical" android:gravity="center">
                     <ImageView android:layout_width="28dp" android:layout_height="28dp"
-                        android:src="@android:drawable/btn_star_big_on" android:tint="#00BCD4" />
+                        android:src="@android:drawable/btn_star_big_on"  />
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                         android:text="Favorite" android:textSize="10sp" android:textColor="#757575"
                         android:layout_marginTop="4dp" />
@@ -142,7 +150,7 @@
                 <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
                     android:layout_weight="1" android:orientation="vertical" android:gravity="center">
                     <ImageView android:layout_width="28dp" android:layout_height="28dp"
-                        android:src="@drawable/ic_healthtrack" android:tint="#00BCD4" />
+                        android:src="@drawable/ic_ruangku_logo"  />
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                         android:text="Doctors" android:textSize="10sp" android:textColor="#757575"
                         android:layout_marginTop="4dp" />
@@ -151,7 +159,7 @@
                 <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
                     android:layout_weight="1" android:orientation="vertical" android:gravity="center">
                     <ImageView android:layout_width="28dp" android:layout_height="28dp"
-                        android:src="@android:drawable/ic_menu_add" android:tint="#00BCD4" />
+                        android:src="@android:drawable/ic_menu_add"  />
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                         android:text="Pharmacy" android:textSize="10sp" android:textColor="#757575"
                         android:layout_marginTop="4dp" />
@@ -160,7 +168,7 @@
                 <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
                     android:layout_weight="1" android:orientation="vertical" android:gravity="center">
                     <ImageView android:layout_width="28dp" android:layout_height="28dp"
-                        android:src="@android:drawable/ic_menu_compass" android:tint="#00BCD4" />
+                        android:src="@android:drawable/ic_menu_compass"  />
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                         android:text="Specialties" android:textSize="10sp" android:textColor="#757575"
                         android:layout_marginTop="4dp" />
@@ -169,7 +177,7 @@
                 <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
                     android:layout_weight="1" android:orientation="vertical" android:gravity="center">
                     <ImageView android:layout_width="28dp" android:layout_height="28dp"
-                        android:src="@android:drawable/ic_menu_agenda" android:tint="#00BCD4" />
+                        android:src="@android:drawable/ic_menu_agenda"  />
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                         android:text="Record" android:textSize="10sp" android:textColor="#757575"
                         android:layout_marginTop="4dp" />
@@ -184,7 +192,7 @@
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="16dp"
                 app:cardCornerRadius="20dp"
-                app:cardBackgroundColor="#00BCD4"
+                app:cardBackgroundColor="#1565C0"
                 app:cardElevation="4dp">
 
                 <LinearLayout
@@ -214,7 +222,7 @@
                             android:layout_height="wrap_content"
                             android:text="Month"
                             android:textSize="12sp"
-                            android:textColor="#E0F7FA" />
+                            android:textColor="#E3EEFF" />
                     </LinearLayout>
 
                     <!-- Date Row -->
@@ -228,17 +236,17 @@
                         <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
                             android:layout_weight="1" android:orientation="vertical" android:gravity="center">
                             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                android:text="9" android:textSize="16sp" android:textColor="#E0F7FA" android:textStyle="bold" />
+                                android:text="9" android:textSize="16sp" android:textColor="#E3EEFF" android:textStyle="bold" />
                             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                android:text="MON" android:textSize="9sp" android:textColor="#E0F7FA" />
+                                android:text="MON" android:textSize="9sp" android:textColor="#E3EEFF" />
                         </LinearLayout>
 
                         <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
                             android:layout_weight="1" android:orientation="vertical" android:gravity="center">
                             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                android:text="10" android:textSize="16sp" android:textColor="#E0F7FA" android:textStyle="bold" />
+                                android:text="10" android:textSize="16sp" android:textColor="#E3EEFF" android:textStyle="bold" />
                             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                android:text="TUE" android:textSize="9sp" android:textColor="#E0F7FA" />
+                                android:text="TUE" android:textSize="9sp" android:textColor="#E3EEFF" />
                         </LinearLayout>
 
                         <!-- Active date -->
@@ -246,33 +254,33 @@
                             android:layout_weight="1" android:orientation="vertical" android:gravity="center"
                             android:background="#FFFFFF" android:padding="6dp">
                             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                android:text="11" android:textSize="16sp" android:textColor="#00BCD4" android:textStyle="bold" />
+                                android:text="11" android:textSize="16sp" android:textColor="#1565C0" android:textStyle="bold" />
                             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                android:text="WED" android:textSize="9sp" android:textColor="#00BCD4" />
+                                android:text="WED" android:textSize="9sp" android:textColor="#1565C0" />
                         </LinearLayout>
 
                         <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
                             android:layout_weight="1" android:orientation="vertical" android:gravity="center">
                             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                android:text="12" android:textSize="16sp" android:textColor="#E0F7FA" android:textStyle="bold" />
+                                android:text="12" android:textSize="16sp" android:textColor="#E3EEFF" android:textStyle="bold" />
                             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                android:text="THU" android:textSize="9sp" android:textColor="#E0F7FA" />
+                                android:text="THU" android:textSize="9sp" android:textColor="#E3EEFF" />
                         </LinearLayout>
 
                         <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
                             android:layout_weight="1" android:orientation="vertical" android:gravity="center">
                             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                android:text="13" android:textSize="16sp" android:textColor="#E0F7FA" android:textStyle="bold" />
+                                android:text="13" android:textSize="16sp" android:textColor="#E3EEFF" android:textStyle="bold" />
                             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                android:text="FRI" android:textSize="9sp" android:textColor="#E0F7FA" />
+                                android:text="FRI" android:textSize="9sp" android:textColor="#E3EEFF" />
                         </LinearLayout>
 
                         <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
                             android:layout_weight="1" android:orientation="vertical" android:gravity="center">
                             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                android:text="14" android:textSize="16sp" android:textColor="#E0F7FA" android:textStyle="bold" />
+                                android:text="14" android:textSize="16sp" android:textColor="#E3EEFF" android:textStyle="bold" />
                             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                android:text="SAT" android:textSize="9sp" android:textColor="#E0F7FA" />
+                                android:text="SAT" android:textSize="9sp" android:textColor="#E3EEFF" />
                         </LinearLayout>
                     </LinearLayout>
 
@@ -295,7 +303,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="See all"
                                 android:textSize="11sp"
-                                android:textColor="#E0F7FA" />
+                                android:textColor="#E3EEFF" />
                         </LinearLayout>
 
                         <View android:layout_width="match_parent" android:layout_height="1dp"
@@ -306,7 +314,7 @@
                             android:layout_height="wrap_content"
                             android:text="• 11 Month - Wednesday - Today"
                             android:textSize="11sp"
-                            android:textColor="#E0F7FA" />
+                            android:textColor="#E3EEFF" />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -324,7 +332,7 @@
                             android:layout_height="wrap_content"
                             android:text="• 16 Month - Monday"
                             android:textSize="11sp"
-                            android:textColor="#E0F7FA" />
+                            android:textColor="#E3EEFF" />
                         <TextView
                             android:id="@+id/tvDeskripsiDariUtama"
                             android:layout_width="wrap_content"
@@ -354,7 +362,7 @@
                     android:layout_weight="1"
                     android:text="Specialties"
                     android:textSize="16sp"
-                    android:textColor="#00BCD4"
+                    android:textColor="#1565C0"
                     android:textStyle="bold" />
 
                 <TextView
@@ -362,7 +370,7 @@
                     android:layout_height="wrap_content"
                     android:text="See all"
                     android:textSize="12sp"
-                    android:textColor="#00BCD4" />
+                    android:textColor="#1565C0" />
             </LinearLayout>
 
             <!-- Specialties Grid Row 1 -->
@@ -380,11 +388,11 @@
                     android:layout_weight="1"
                     android:layout_marginEnd="6dp"
                     app:cardCornerRadius="14dp"
-                    app:cardBackgroundColor="#00BCD4">
+                    app:cardBackgroundColor="#1565C0">
                     <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
                         android:orientation="vertical" android:gravity="center">
                         <ImageView android:layout_width="32dp" android:layout_height="32dp"
-                            android:src="@drawable/ic_healthtrack" android:tint="#FFFFFF"
+                            android:src="@drawable/ic_ruangku_logo" android:tint="#FFFFFF"
                             android:layout_marginBottom="6dp" />
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                             android:text="Cardiology" android:textColor="#FFFFFF" android:textSize="11sp"
@@ -398,11 +406,11 @@
                     android:layout_weight="1"
                     android:layout_marginEnd="6dp"
                     app:cardCornerRadius="14dp"
-                    app:cardBackgroundColor="#00BCD4">
+                    app:cardBackgroundColor="#1565C0">
                     <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
                         android:orientation="vertical" android:gravity="center">
                         <ImageView android:layout_width="32dp" android:layout_height="32dp"
-                            android:src="@drawable/ic_healthtrack" android:tint="#FFFFFF"
+                            android:src="@drawable/ic_ruangku_logo" android:tint="#FFFFFF"
                             android:layout_marginBottom="6dp" />
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                             android:text="Dermatology" android:textColor="#FFFFFF" android:textSize="11sp"
@@ -415,11 +423,11 @@
                     android:layout_height="90dp"
                     android:layout_weight="1"
                     app:cardCornerRadius="14dp"
-                    app:cardBackgroundColor="#00BCD4">
+                    app:cardBackgroundColor="#1565C0">
                     <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
                         android:orientation="vertical" android:gravity="center">
                         <ImageView android:layout_width="32dp" android:layout_height="32dp"
-                            android:src="@drawable/ic_healthtrack" android:tint="#FFFFFF"
+                            android:src="@drawable/ic_ruangku_logo" android:tint="#FFFFFF"
                             android:layout_marginBottom="6dp" />
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                             android:text="General\nMedicine" android:textColor="#FFFFFF" android:textSize="11sp"
@@ -443,11 +451,11 @@
                     android:layout_weight="1"
                     android:layout_marginEnd="6dp"
                     app:cardCornerRadius="14dp"
-                    app:cardBackgroundColor="#00BCD4">
+                    app:cardBackgroundColor="#1565C0">
                     <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
                         android:orientation="vertical" android:gravity="center">
                         <ImageView android:layout_width="32dp" android:layout_height="32dp"
-                            android:src="@drawable/ic_healthtrack" android:tint="#FFFFFF"
+                            android:src="@drawable/ic_ruangku_logo" android:tint="#FFFFFF"
                             android:layout_marginBottom="6dp" />
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                             android:text="Gynecology" android:textColor="#FFFFFF" android:textSize="11sp"
@@ -461,11 +469,11 @@
                     android:layout_weight="1"
                     android:layout_marginEnd="6dp"
                     app:cardCornerRadius="14dp"
-                    app:cardBackgroundColor="#00BCD4">
+                    app:cardBackgroundColor="#1565C0">
                     <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
                         android:orientation="vertical" android:gravity="center">
                         <ImageView android:layout_width="32dp" android:layout_height="32dp"
-                            android:src="@drawable/ic_healthtrack" android:tint="#FFFFFF"
+                            android:src="@drawable/ic_ruangku_logo" android:tint="#FFFFFF"
                             android:layout_marginBottom="6dp" />
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                             android:text="Odontology" android:textColor="#FFFFFF" android:textSize="11sp"
@@ -478,11 +486,11 @@
                     android:layout_height="90dp"
                     android:layout_weight="1"
                     app:cardCornerRadius="14dp"
-                    app:cardBackgroundColor="#00BCD4">
+                    app:cardBackgroundColor="#1565C0">
                     <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
                         android:orientation="vertical" android:gravity="center">
                         <ImageView android:layout_width="32dp" android:layout_height="32dp"
-                            android:src="@drawable/ic_healthtrack" android:tint="#FFFFFF"
+                            android:src="@drawable/ic_ruangku_logo" android:tint="#FFFFFF"
                             android:layout_marginBottom="6dp" />
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                             android:text="Oncology" android:textColor="#FFFFFF" android:textSize="11sp"
@@ -493,6 +501,21 @@
 
         </LinearLayout>
     </ScrollView>
+
+    <!-- Tombol Web Bina Desa -->
+    <Button
+        android:id="@+id/btnWebView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="🌐  Buka Web Bina Desa"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:backgroundTint="#0D47A1"
+        android:textColor="#FFFFFF"
+        app:cornerRadius="14dp" />
 
     <!-- Bottom Nav -->
     <LinearLayout
@@ -508,7 +531,7 @@
             android:layout_height="24dp"
             android:layout_weight="1"
             android:src="@android:drawable/ic_menu_compass"
-            android:tint="#00BCD4" />
+             />
 
         <ImageView
             android:layout_width="0dp"
@@ -528,13 +551,13 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:src="@android:drawable/ic_media_previous"
-                android:tint="#00BCD4" />
+                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Kembali"
                 android:textSize="9sp"
-                android:textColor="#00BCD4" />
+                android:textColor="#1565C0" />
         </LinearLayout>
 
         <ImageView
@@ -546,3 +569,5 @@
     </LinearLayout>
 
 </LinearLayout>
+
+

@@ -1,15 +1,19 @@
 package com.example.bunga_floryn.pertemuan_3
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import android.widget.Button
 import android.widget.TextView
-import androidx.appcompat.app.AlertDialog
 import com.example.bunga_floryn.R
 import com.example.bunga_floryn.pertemuan_2.MainActivity as RumusBangunRuangActivity
 import com.example.bunga_floryn.pertemuan_4.CustomActivity1
 import com.example.bunga_floryn.pertemuan_4.CustomActivity2
+import com.example.bunga_floryn.AuthActivity
+import com.example.bunga_floryn.pertemuan_5.WebViewActivity
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 
 class WelcomeActivity : AppCompatActivity() {
@@ -19,39 +23,45 @@ class WelcomeActivity : AppCompatActivity() {
     private lateinit var btnCustom1: Button
     private lateinit var btnCustom2: Button
     private lateinit var btnLogout: Button
+    private lateinit var btnPertemuan5: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_welcome)
 
+        // Setup Toolbar
+        val toolbar = findViewById<Toolbar>(R.id.toolbar)
+        setSupportActionBar(toolbar)
+        supportActionBar?.apply {
+            title = "Welcome"
+            subtitle = "RuangKu"
+        }
 
-        android.util.Log.e("onCreate", "WelcomeActivity dibuat pertama kali")
-
-        // Inisialisasi View
         tvUsername = findViewById(R.id.tvUsername)
         btnRumusBangunRuang = findViewById(R.id.btnRumusBangunRuang)
         btnCustom1 = findViewById(R.id.btnCustom1)
         btnCustom2 = findViewById(R.id.btnCustom2)
         btnLogout = findViewById(R.id.btnLogout)
+        btnPertemuan5 = findViewById(R.id.btnPertemuan5)
 
-        // Ambil data username dari LoginActivity
-        val username = intent.getStringExtra("USERNAME") ?: "User"
+        // Ambil username dari SharedPreferences atau Intent
+        val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
+        val username = sharedPref.getString("username", null)
+            ?: intent.getStringExtra("USERNAME")
+            ?: "User"
         tvUsername.text = username
 
-        setupClickListeners()
+        setupClickListeners(sharedPref)
     }
 
-    private fun setupClickListeners() {
-        // Tombol 1: ke halaman rumus bangun ruang
+    private fun setupClickListeners(sharedPref: android.content.SharedPreferences) {
         btnRumusBangunRuang.setOnClickListener {
             val intent = Intent(this, RumusBangunRuangActivity::class.java)
-            // Kirim data judul dan deskripsi (sesuai tugas)
             intent.putExtra("judul_halaman", "Rumus Bangun Ruang")
             intent.putExtra("deskripsi", "Hitung luas segitiga dan volume bola")
             startActivity(intent)
         }
 
-        // Tombol 2: ke custom screen 1
         btnCustom1.setOnClickListener {
             val intent = Intent(this, CustomActivity1::class.java)
             intent.putExtra("judul_halaman", "Custom Screen 1")
@@ -59,7 +69,6 @@ class WelcomeActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        // Tombol 3: ke custom screen 2
         btnCustom2.setOnClickListener {
             val intent = Intent(this, CustomActivity2::class.java)
             intent.putExtra("judul_halaman", "Custom Screen 2")
@@ -67,45 +76,44 @@ class WelcomeActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        // Tombol 4: Logout dengan AlertDialog (sesuai materi dosen)
+        btnPertemuan5.setOnClickListener {
+            startActivity(Intent(this, WebViewActivity::class.java))
+        }
+
         btnLogout.setOnClickListener {
-            showLogoutConfirmation()
+            MaterialAlertDialogBuilder(this)
+                .setTitle("Konfirmasi Logout")
+                .setMessage("Apakah Anda yakin ingin logout?")
+                .setPositiveButton("Ya") { dialog, _ ->
+                    // Hapus SharedPreferences
+                    val editor = sharedPref.edit()
+                    editor.clear()
+                    editor.apply()
+                    dialog.dismiss()
+                    val intent = Intent(this, AuthActivity::class.java)
+                    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                    startActivity(intent)
+                    finish()
+                }
+                .setNegativeButton("Tidak") { dialog, _ ->
+                    dialog.dismiss()
+                    Snackbar.make(
+                        findViewById(android.R.id.content),
+                        "Logout dibatalkan",
+                        Snackbar.LENGTH_SHORT
+                    ).show()
+                }
+                .show()
         }
     }
 
-    private fun showLogoutConfirmation() {
-        com.google.android.material.dialog.MaterialAlertDialogBuilder(this)
-            .setTitle("Konfirmasi Logout")
-            .setMessage("Apakah Anda yakin ingin logout?")
-            .setPositiveButton("Ya") { dialog, _ ->
-                dialog.dismiss()
-                android.util.Log.e("Info Dialog", "Anda memilih Ya, logout!")
-                // Pindah ke LoginActivity
-                val intent = Intent(this, LoginActivity::class.java)
-                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-                startActivity(intent)
-                finish()
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            android.R.id.home -> {
+                onBackPressedDispatcher.onBackPressed()
+                true
             }
-            .setNegativeButton("Tidak") { dialog, _ ->
-                dialog.dismiss()
-                android.util.Log.e("Info Dialog", "Anda memilih Tidak!")
-                // Tampilkan Snackbar (sesuai materi dosen)
-                Snackbar.make(
-                    findViewById(android.R.id.content),
-                    "Logout dibatalkan",
-                    Snackbar.LENGTH_SHORT
-                ).setAction("Tutup") {
-                    android.util.Log.e("Info Snackbar", "Snackbar ditutup")
-                }.show()
-            }
-            .show()
-    }
-    override fun onStart() {
-        super.onStart()
-        android.util.Log.e("onStart", "WelcomeActivity terlihat di layar")
-    }
-    override fun onDestroy() {
-        super.onDestroy()
-        android.util.Log.e("onDestroy", "WelcomeActivity dihapus dari stack")
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 }

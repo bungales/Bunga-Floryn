@@ -6,15 +6,23 @@
     android:orientation="vertical"
     android:background="#F0FAFA">
 
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:titleTextColor="@android:color/white" />
+
     <!-- Header -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="#00BCD4"
+        android:background="#1565C0"
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
-        android:paddingTop="40dp"
+        android:paddingTop="16dp"
         android:paddingBottom="20dp">
 
         <LinearLayout
@@ -52,7 +60,7 @@
             android:layout_height="wrap_content"
             android:text="Find Your Doctor"
             android:textSize="13sp"
-            android:textColor="#E0F7FA"
+            android:textColor="#E3EEFF"
             android:gravity="center"
             android:layout_marginBottom="16dp" />
 
@@ -70,7 +78,7 @@
                 android:layout_width="18dp"
                 android:layout_height="18dp"
                 android:src="@android:drawable/ic_menu_search"
-                android:tint="#00BCD4"
+                
                 android:layout_marginEnd="8dp" />
 
             <TextView
@@ -108,7 +116,7 @@
             android:text="A → Z"
             android:textSize="11sp"
             android:textColor="#FFFFFF"
-            android:background="#00BCD4"
+            android:background="#1565C0"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
             android:gravity="center"
@@ -119,7 +127,7 @@
             android:layout_height="28dp"
             android:text="Filter"
             android:textSize="11sp"
-            android:textColor="#00BCD4"
+            android:textColor="#1565C0"
             android:background="@android:color/transparent"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
@@ -132,7 +140,7 @@
             android:layout_height="wrap_content"
             android:text="Doctors"
             android:textSize="12sp"
-            android:textColor="#00BCD4"
+            android:textColor="#1565C0"
             android:textStyle="bold" />
     </LinearLayout>
 
@@ -162,7 +170,7 @@
                     android:layout_weight="1"
                     android:layout_marginEnd="6dp"
                     app:cardCornerRadius="16dp"
-                    app:cardBackgroundColor="#00BCD4">
+                    app:cardBackgroundColor="#1565C0">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -171,7 +179,7 @@
                         <ImageView
                             android:layout_width="48dp"
                             android:layout_height="48dp"
-                            android:src="@drawable/ic_healthtrack"
+                            android:src="@drawable/ic_ruangku_logo"
                             android:tint="#FFFFFF"
                             android:layout_marginBottom="8dp" />
                         <TextView
@@ -190,7 +198,7 @@
                     android:layout_weight="1"
                     android:layout_marginStart="6dp"
                     app:cardCornerRadius="16dp"
-                    app:cardBackgroundColor="#00BCD4">
+                    app:cardBackgroundColor="#1565C0">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -199,7 +207,7 @@
                         <ImageView
                             android:layout_width="48dp"
                             android:layout_height="48dp"
-                            android:src="@drawable/ic_healthtrack"
+                            android:src="@drawable/ic_ruangku_logo"
                             android:tint="#FFFFFF"
                             android:layout_marginBottom="8dp" />
                         <TextView
@@ -226,7 +234,7 @@
                     android:layout_weight="1"
                     android:layout_marginEnd="6dp"
                     app:cardCornerRadius="16dp"
-                    app:cardBackgroundColor="#00BCD4">
+                    app:cardBackgroundColor="#1565C0">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -235,7 +243,7 @@
                         <ImageView
                             android:layout_width="48dp"
                             android:layout_height="48dp"
-                            android:src="@drawable/ic_healthtrack"
+                            android:src="@drawable/ic_ruangku_logo"
                             android:tint="#FFFFFF"
                             android:layout_marginBottom="8dp" />
                         <TextView
@@ -255,7 +263,7 @@
                     android:layout_weight="1"
                     android:layout_marginStart="6dp"
                     app:cardCornerRadius="16dp"
-                    app:cardBackgroundColor="#00BCD4">
+                    app:cardBackgroundColor="#1565C0">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -264,7 +272,7 @@
                         <ImageView
                             android:layout_width="48dp"
                             android:layout_height="48dp"
-                            android:src="@drawable/ic_healthtrack"
+                            android:src="@drawable/ic_ruangku_logo"
                             android:tint="#FFFFFF"
                             android:layout_marginBottom="8dp" />
                         <TextView
@@ -291,7 +299,7 @@
                     android:layout_weight="1"
                     android:layout_marginEnd="6dp"
                     app:cardCornerRadius="16dp"
-                    app:cardBackgroundColor="#00BCD4">
+                    app:cardBackgroundColor="#1565C0">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -300,7 +308,7 @@
                         <ImageView
                             android:layout_width="48dp"
                             android:layout_height="48dp"
-                            android:src="@drawable/ic_healthtrack"
+                            android:src="@drawable/ic_ruangku_logo"
                             android:tint="#FFFFFF"
                             android:layout_marginBottom="8dp" />
                         <TextView
@@ -319,7 +327,7 @@
                     android:layout_weight="1"
                     android:layout_marginStart="6dp"
                     app:cardCornerRadius="16dp"
-                    app:cardBackgroundColor="#00BCD4">
+                    app:cardBackgroundColor="#1565C0">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -328,7 +336,7 @@
                         <ImageView
                             android:layout_width="48dp"
                             android:layout_height="48dp"
-                            android:src="@drawable/ic_healthtrack"
+                            android:src="@drawable/ic_ruangku_logo"
                             android:tint="#FFFFFF"
                             android:layout_marginBottom="8dp" />
                         <TextView
@@ -355,7 +363,7 @@
                     android:layout_weight="1"
                     android:layout_marginEnd="6dp"
                     app:cardCornerRadius="16dp"
-                    app:cardBackgroundColor="#00BCD4">
+                    app:cardBackgroundColor="#1565C0">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -364,7 +372,7 @@
                         <ImageView
                             android:layout_width="48dp"
                             android:layout_height="48dp"
-                            android:src="@drawable/ic_healthtrack"
+                            android:src="@drawable/ic_ruangku_logo"
                             android:tint="#FFFFFF"
                             android:layout_marginBottom="8dp" />
                         <TextView
@@ -383,7 +391,7 @@
                     android:layout_weight="1"
                     android:layout_marginStart="6dp"
                     app:cardCornerRadius="16dp"
-                    app:cardBackgroundColor="#00BCD4">
+                    app:cardBackgroundColor="#1565C0">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -392,7 +400,7 @@
                         <ImageView
                             android:layout_width="48dp"
                             android:layout_height="48dp"
-                            android:src="@drawable/ic_healthtrack"
+                            android:src="@drawable/ic_ruangku_logo"
                             android:tint="#FFFFFF"
                             android:layout_marginBottom="8dp" />
                         <TextView
@@ -409,6 +417,21 @@
         </LinearLayout>
     </ScrollView>
 
+    <!-- Tombol Web Bina Desa -->
+    <Button
+        android:id="@+id/btnWebView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="🌐  Buka Web Bina Desa"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:backgroundTint="#0D47A1"
+        android:textColor="#FFFFFF"
+        app:cornerRadius="14dp" />
+
     <!-- Bottom Nav -->
     <LinearLayout
         android:layout_width="match_parent"
@@ -423,7 +446,7 @@
             android:layout_height="24dp"
             android:layout_weight="1"
             android:src="@android:drawable/ic_menu_compass"
-            android:tint="#00BCD4"
+            
             android:gravity="center" />
 
         <ImageView
@@ -444,13 +467,13 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:src="@android:drawable/ic_media_previous"
-                android:tint="#00BCD4" />
+                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Kembali"
                 android:textSize="9sp"
-                android:textColor="#00BCD4" />
+                android:textColor="#1565C0" />
         </LinearLayout>
 
         <ImageView
@@ -462,3 +485,5 @@
     </LinearLayout>
 
 </LinearLayout>
+
+

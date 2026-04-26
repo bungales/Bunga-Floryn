@@ -6,13 +6,22 @@
     android:background="#F0FAFA"
     android:orientation="vertical">
 
-    <!-- Header teal -->
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:titleTextColor="@android:color/white"
+        app:subtitleTextColor="@android:color/white" />
+
+    <!-- Header -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="180dp"
         android:orientation="vertical"
         android:gravity="center"
-        android:background="#00BCD4"
+        android:background="#1565C0"
         android:paddingBottom="28dp">
 
         <androidx.cardview.widget.CardView
@@ -25,19 +34,18 @@
 
             <ImageView
                 android:id="@+id/ivLogo"
-                android:layout_width="44dp"
-                android:layout_height="44dp"
-                android:src="@drawable/ic_healthtrack"
-                android:tint="#00BCD4"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:src="@drawable/ic_ruangku_logo"
+                android:scaleType="fitCenter"
                 android:layout_gravity="center" />
         </androidx.cardview.widget.CardView>
 
         <TextView
-            android:id="@+id/tvAppTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="HealthTrack"
-            android:textSize="24sp"
+            android:textSize="22sp"
             android:textColor="#FFFFFF"
             android:fontFamily="@font/inter_variablefont_opsz_wght"
             android:textStyle="bold"
@@ -48,7 +56,7 @@
             android:layout_height="wrap_content"
             android:text="Pantau kesehatan Anda, hidup lebih baik"
             android:textSize="12sp"
-            android:textColor="#E0F7FA"
+            android:textColor="#B3C6FF"
             android:fontFamily="@font/inter_variablefont_opsz_wght" />
     </LinearLayout>
 
@@ -72,7 +80,6 @@
             android:gravity="center">
 
             <TextView
-                android:id="@+id/tvWelcomeMessage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Selamat Datang,"
@@ -87,7 +94,7 @@
                 android:layout_height="wrap_content"
                 android:text="User"
                 android:textSize="22sp"
-                android:textColor="#00BCD4"
+                android:textColor="#1565C0"
                 android:fontFamily="@font/inter_variablefont_opsz_wght"
                 android:textStyle="bold"
                 android:layout_marginBottom="10dp" />
@@ -95,19 +102,18 @@
             <View
                 android:layout_width="40dp"
                 android:layout_height="2dp"
-                android:background="#00BCD4"
+                android:background="#1565C0"
                 android:layout_marginBottom="10dp" />
 
             <TextView
-                android:id="@+id/tvDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Pilih menu di bawah untuk mulai memantau kesehatanmu hari ini."
+                android:text="💪 Kesehatan adalah investasi terbaik.\nMulai hari ini, jaga tubuhmu dengan baik!"
                 android:textSize="12sp"
-                android:textColor="#90A4AE"
+                android:textColor="#757575"
                 android:fontFamily="@font/inter_variablefont_opsz_wght"
                 android:textAlignment="center"
-                android:lineSpacingExtra="3dp" />
+                android:lineSpacingExtra="4dp" />
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
@@ -126,7 +132,7 @@
             android:text="📐  Rumus Bangun Ruang"
             android:textSize="13sp"
             android:textStyle="bold"
-            android:backgroundTint="#00BCD4"
+            android:backgroundTint="#1565C0"
             android:textColor="#FFFFFF"
             app:cornerRadius="14dp"
             android:layout_marginBottom="10dp" />
@@ -135,10 +141,10 @@
             android:id="@+id/btnCustom1"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:text="🏥  Specialties"
+            android:text="🏥  Cek Kesehatan"
             android:textSize="13sp"
             android:textStyle="bold"
-            android:backgroundTint="#00ACC1"
+            android:backgroundTint="#1976D2"
             android:textColor="#FFFFFF"
             app:cornerRadius="14dp"
             android:layout_marginBottom="10dp" />
@@ -147,10 +153,22 @@
             android:id="@+id/btnCustom2"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:text="🏠  Home Dashboard"
+            android:text="📅  Jadwal &amp; Tips Sehat"
             android:textSize="13sp"
             android:textStyle="bold"
-            android:backgroundTint="#0097A7"
+            android:backgroundTint="#0D47A1"
+            android:textColor="#FFFFFF"
+            app:cornerRadius="14dp"
+            android:layout_marginBottom="10dp" />
+
+        <Button
+            android:id="@+id/btnPertemuan5"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="🌐  Buka Web Bina Desa"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:backgroundTint="#0D47A1"
             android:textColor="#FFFFFF"
             app:cornerRadius="14dp"
             android:layout_marginBottom="10dp" />
@@ -162,10 +180,12 @@
             android:text="🚪  Logout"
             android:textSize="13sp"
             android:textStyle="bold"
-            android:backgroundTint="#E0F7FA"
-            android:textColor="#00838F"
+            android:backgroundTint="#E3EEFF"
+            android:textColor="#1565C0"
             app:cornerRadius="14dp" />
 
     </LinearLayout>
 
 </LinearLayout>
+
+
