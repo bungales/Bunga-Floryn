@@ -179,7 +179,7 @@
                         <ImageView
                             android:layout_width="48dp"
                             android:layout_height="48dp"
-                            android:src="@drawable/ic_ruangku_logo"
+                            android:src="@drawable/logo"
                             android:tint="#FFFFFF"
                             android:layout_marginBottom="8dp" />
                         <TextView
@@ -207,7 +207,7 @@
                         <ImageView
                             android:layout_width="48dp"
                             android:layout_height="48dp"
-                            android:src="@drawable/ic_ruangku_logo"
+                            android:src="@drawable/logo"
                             android:tint="#FFFFFF"
                             android:layout_marginBottom="8dp" />
                         <TextView
@@ -243,7 +243,7 @@
                         <ImageView
                             android:layout_width="48dp"
                             android:layout_height="48dp"
-                            android:src="@drawable/ic_ruangku_logo"
+                            android:src="@drawable/logo"
                             android:tint="#FFFFFF"
                             android:layout_marginBottom="8dp" />
                         <TextView
@@ -272,7 +272,7 @@
                         <ImageView
                             android:layout_width="48dp"
                             android:layout_height="48dp"
-                            android:src="@drawable/ic_ruangku_logo"
+                            android:src="@drawable/logo"
                             android:tint="#FFFFFF"
                             android:layout_marginBottom="8dp" />
                         <TextView
@@ -308,7 +308,7 @@
                         <ImageView
                             android:layout_width="48dp"
                             android:layout_height="48dp"
-                            android:src="@drawable/ic_ruangku_logo"
+                            android:src="@drawable/logo"
                             android:tint="#FFFFFF"
                             android:layout_marginBottom="8dp" />
                         <TextView
@@ -336,7 +336,7 @@
                         <ImageView
                             android:layout_width="48dp"
                             android:layout_height="48dp"
-                            android:src="@drawable/ic_ruangku_logo"
+                            android:src="@drawable/logo"
                             android:tint="#FFFFFF"
                             android:layout_marginBottom="8dp" />
                         <TextView
@@ -372,7 +372,7 @@
                         <ImageView
                             android:layout_width="48dp"
                             android:layout_height="48dp"
-                            android:src="@drawable/ic_ruangku_logo"
+                            android:src="@drawable/logo"
                             android:tint="#FFFFFF"
                             android:layout_marginBottom="8dp" />
                         <TextView
@@ -400,7 +400,7 @@
                         <ImageView
                             android:layout_width="48dp"
                             android:layout_height="48dp"
-                            android:src="@drawable/ic_ruangku_logo"
+                            android:src="@drawable/logo"
                             android:tint="#FFFFFF"
                             android:layout_marginBottom="8dp" />
                         <TextView

@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Panel Kiri: Form Login -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="28dp"
+            android:background="#FFFFFF">
+
+            <!-- Logo + Nama App -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="24dp">
+
+                <!-- Logo Box -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp"
+                    app:cardBackgroundColor="#FFFFFF"
+                    app:strokeColor="@color/accent_yellow"
+                    app:strokeWidth="2dp"
+                    android:layout_marginEnd="14dp">
+
+                    <ImageView
+                        android:layout_width="52dp"
+                        android:layout_height="52dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/logo"
+                        android:scaleType="fitCenter" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="RuangKu"
+                        android:textSize="26sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_dark"
+                        android:fontFamily="@font/inter_variablefont_opsz_wght" />
+
+                    <!-- Badge ADMIN -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ADMIN"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        android:background="@color/accent_yellow"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+                        android:fontFamily="@font/inter_variablefont_opsz_wght" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Judul -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selamat Datang Admin"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_dark"
+                android:fontFamily="@font/inter_variablefont_opsz_wght"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Masuk ke dashboard untuk mengelola fasilitas desa"
+                android:textSize="13sp"
+                android:textColor="@color/text_light"
+                android:fontFamily="@font/inter_variablefont_opsz_wght"
+                android:layout_marginBottom="28dp" />
+
+            <!-- Label Email -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@android:drawable/ic_dialog_email"
+                    android:tint="@color/text_dark"
+                    android:layout_marginEnd="6dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_dark"
+                    android:fontFamily="@font/inter_variablefont_opsz_wght" />
+            </LinearLayout>
+
+            <!-- Input Email -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:boxStrokeColor="@color/primary_blue"
+                app:hintTextColor="@color/primary_blue"
+                app:boxCornerRadiusTopStart="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                app:boxCornerRadiusBottomEnd="10dp"
+                android:layout_marginBottom="20dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="admin@desa.example"
+                    android:inputType="textEmailAddress"
+                    android:fontFamily="@font/inter_variablefont_opsz_wght" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Label Password -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@android:drawable/ic_lock_lock"
+                    android:tint="@color/text_dark"
+                    android:layout_marginEnd="6dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Password"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_dark"
+                    android:fontFamily="@font/inter_variablefont_opsz_wght" />
+            </LinearLayout>
+
+            <!-- Input Password -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:boxStrokeColor="@color/primary_blue"
+                app:hintTextColor="@color/primary_blue"
+                app:endIconMode="password_toggle"
+                app:boxCornerRadiusTopStart="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                app:boxCornerRadiusBottomEnd="10dp"
+                android:layout_marginBottom="28dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Masukkan password"
+                    android:inputType="textPassword"
+                    android:fontFamily="@font/inter_variablefont_opsz_wght" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Tombol Login -->
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:text="→  Masuk ke Dashboard"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="@color/primary_blue"
+                android:fontFamily="@font/inter_variablefont_opsz_wght"
+                app:cornerRadius="10dp"
+                android:layout_marginBottom="20dp" />
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_light"
+                android:layout_marginBottom="20dp" />
+
+            <!-- Belum punya akun -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Belum punya akun?"
+                android:textSize="13sp"
+                android:textColor="@color/text_light"
+                android:fontFamily="@font/inter_variablefont_opsz_wght"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp" />
+
+            <!-- Tombol Buat Akun -->
+            <Button
+                android:id="@+id/btnBuatAkun"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:text="👤  Buat Akun Baru"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary_blue"
+                android:backgroundTint="@color/blue_soft"
+                android:fontFamily="@font/inter_variablefont_opsz_wght"
+                app:cornerRadius="10dp"
+                android:layout_marginBottom="10dp" />
+
+            <!-- Info verifikasi -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_horizontal">
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:src="@android:drawable/ic_dialog_info"
+                    android:tint="@color/text_light"
+                    android:layout_marginEnd="4dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Akun baru akan diverifikasi oleh Super Admin"
+                    android:textSize="11sp"
+                    android:textColor="@color/text_light"
+                    android:fontFamily="@font/inter_variablefont_opsz_wght" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Panel Bawah: Info Sistem (pengganti panel kanan di mobile) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="28dp"
+            android:background="@color/primary_blue">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sistem Pengelolaan Fasilitas Desa"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:textAlignment="center"
+                android:fontFamily="@font/inter_variablefont_opsz_wght"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kelola peminjaman balai, lapangan, dan fasilitas desa lainnya dengan mudah melalui dashboard admin."
+                android:textSize="13sp"
+                android:textColor="#B3C6FF"
+                android:textAlignment="center"
+                android:fontFamily="@font/inter_variablefont_opsz_wght"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Icon row -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="16dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardBackgroundColor="#FFFFFF1A"
+                    app:cardElevation="0dp"
+                    android:layout_marginEnd="12dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="🏠"
+                        android:textSize="24sp"
+                        android:gravity="center" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardBackgroundColor="#FFFFFF1A"
+                    app:cardElevation="0dp"
+                    android:layout_marginEnd="12dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="⚽"
+                        android:textSize="24sp"
+                        android:gravity="center" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardBackgroundColor="#FFFFFF1A"
+                    app:cardElevation="0dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="🏢"
+                        android:textSize="24sp"
+                        android:gravity="center" />
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <!-- Label fasilitas -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🏠 Balai Desa  •  ⚽ Lapangan  •  🏢 Fasilitas Umum"
+                android:textSize="12sp"
+                android:textColor="@color/accent_yellow"
+                android:textStyle="bold"
+                android:fontFamily="@font/inter_variablefont_opsz_wght"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Info bawah -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🛡 Sistem Terjamin"
+                    android:textSize="11sp"
+                    android:textColor="#B3C6FF"
+                    android:layout_marginEnd="12dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🕐 24/7 Akses"
+                    android:textSize="11sp"
+                    android:textColor="#B3C6FF"
+                    android:layout_marginEnd="12dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📊 Real-time Monitoring"
+                    android:textSize="11sp"
+                    android:textColor="#B3C6FF" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

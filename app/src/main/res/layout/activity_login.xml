@@ -33,7 +33,7 @@
                     android:id="@+id/ivLogo"
                     android:layout_width="56dp"
                     android:layout_height="56dp"
-                    android:src="@drawable/ic_ruangku_logo"
+                    android:src="@drawable/logo"
                     android:scaleType="fitCenter"
                     android:layout_gravity="center" />
             </androidx.cardview.widget.CardView>

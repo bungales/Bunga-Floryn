@@ -150,7 +150,7 @@
                 <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
                     android:layout_weight="1" android:orientation="vertical" android:gravity="center">
                     <ImageView android:layout_width="28dp" android:layout_height="28dp"
-                        android:src="@drawable/ic_ruangku_logo"  />
+                        android:src="@drawable/logo"  />
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                         android:text="Doctors" android:textSize="10sp" android:textColor="#757575"
                         android:layout_marginTop="4dp" />
@@ -392,7 +392,7 @@
                     <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
                         android:orientation="vertical" android:gravity="center">
                         <ImageView android:layout_width="32dp" android:layout_height="32dp"
-                            android:src="@drawable/ic_ruangku_logo" android:tint="#FFFFFF"
+                            android:src="@drawable/logo" android:tint="#FFFFFF"
                             android:layout_marginBottom="6dp" />
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                             android:text="Cardiology" android:textColor="#FFFFFF" android:textSize="11sp"
@@ -410,7 +410,7 @@
                     <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
                         android:orientation="vertical" android:gravity="center">
                         <ImageView android:layout_width="32dp" android:layout_height="32dp"
-                            android:src="@drawable/ic_ruangku_logo" android:tint="#FFFFFF"
+                            android:src="@drawable/logo" android:tint="#FFFFFF"
                             android:layout_marginBottom="6dp" />
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                             android:text="Dermatology" android:textColor="#FFFFFF" android:textSize="11sp"
@@ -427,7 +427,7 @@
                     <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
                         android:orientation="vertical" android:gravity="center">
                         <ImageView android:layout_width="32dp" android:layout_height="32dp"
-                            android:src="@drawable/ic_ruangku_logo" android:tint="#FFFFFF"
+                            android:src="@drawable/logo" android:tint="#FFFFFF"
                             android:layout_marginBottom="6dp" />
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                             android:text="General\nMedicine" android:textColor="#FFFFFF" android:textSize="11sp"
@@ -455,7 +455,7 @@
                     <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
                         android:orientation="vertical" android:gravity="center">
                         <ImageView android:layout_width="32dp" android:layout_height="32dp"
-                            android:src="@drawable/ic_ruangku_logo" android:tint="#FFFFFF"
+                            android:src="@drawable/logo" android:tint="#FFFFFF"
                             android:layout_marginBottom="6dp" />
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                             android:text="Gynecology" android:textColor="#FFFFFF" android:textSize="11sp"
@@ -473,7 +473,7 @@
                     <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
                         android:orientation="vertical" android:gravity="center">
                         <ImageView android:layout_width="32dp" android:layout_height="32dp"
-                            android:src="@drawable/ic_ruangku_logo" android:tint="#FFFFFF"
+                            android:src="@drawable/logo" android:tint="#FFFFFF"
                             android:layout_marginBottom="6dp" />
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                             android:text="Odontology" android:textColor="#FFFFFF" android:textSize="11sp"
@@ -490,7 +490,7 @@
                     <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
                         android:orientation="vertical" android:gravity="center">
                         <ImageView android:layout_width="32dp" android:layout_height="32dp"
-                            android:src="@drawable/ic_ruangku_logo" android:tint="#FFFFFF"
+                            android:src="@drawable/logo" android:tint="#FFFFFF"
                             android:layout_marginBottom="6dp" />
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                             android:text="Oncology" android:textColor="#FFFFFF" android:textSize="11sp"

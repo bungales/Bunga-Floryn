@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- ===== TEMA RUANGKU - BIRU BINA DESA ===== -->
     <color name="primary_blue">#1565C0</color>
     <color name="primary_dark">#0D47A1</color>
     <color name="primary_light">#1976D2</color>

@@ -30,6 +30,11 @@
             android:name=".AuthActivity"
             android:exported="false" />
 
+        <!-- Base Activity dengan BottomNavigation -->
+        <activity
+            android:name=".BaseActivity"
+            android:exported="false" />
+
         <!-- Pertemuan 3 -->
         <activity
             android:name=".pertemuan_3.WelcomeActivity"

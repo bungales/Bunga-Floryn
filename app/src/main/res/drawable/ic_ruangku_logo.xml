@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+
+    <!-- Lingkaran daun/orbit bawah -->
+    <path
+        android:pathData="M20,80 Q60,100 100,80 Q60,110 20,80 Z"
+        android:fillColor="#D4B896"
+        android:fillAlpha="0.6" />
+
+    <!-- Daun kiri -->
+    <path
+        android:pathData="M15,70 Q25,45 50,55 Q35,75 15,70 Z"
+        android:fillColor="#E8D5B7"
+        android:fillAlpha="0.8" />
+
+    <!-- Daun kanan -->
+    <path
+        android:pathData="M45,50 Q70,35 75,60 Q60,70 45,50 Z"
+        android:fillColor="#E8D5B7"
+        android:fillAlpha="0.8" />
+
+    <!-- Badan rumah -->
+    <path
+        android:pathData="M28,72 L28,52 L52,52 L52,72 Z"
+        android:fillColor="#3D2B1F" />
+
+    <!-- Atap rumah -->
+    <path
+        android:pathData="M22,54 L40,38 L58,54 Z"
+        android:fillColor="#3D2B1F" />
+
+    <!-- Jendela rumah -->
+    <path
+        android:pathData="M33,60 L33,52 L39,52 L39,60 Z"
+        android:fillColor="#E8D5B7" />
+    <path
+        android:pathData="M41,60 L41,52 L47,52 L47,60 Z"
+        android:fillColor="#E8D5B7" />
+
+    <!-- Bintang / sparkle -->
+    <path
+        android:pathData="M62,30 L64,38 L72,40 L64,42 L62,50 L60,42 L52,40 L60,38 Z"
+        android:fillColor="#D4B896" />
+
+</vector>
