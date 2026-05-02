@@ -11,23 +11,18 @@ import com.example.bunga_floryn.Profile.ProfileFragment
 import com.example.bunga_floryn.databinding.ActivityBaseBinding
 
 class BaseActivity : AppCompatActivity() {
-
     private lateinit var binding: ActivityBaseBinding
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityBaseBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         ViewCompat.setOnApplyWindowInsetsListener(binding.main) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, 0)
             insets
         }
-
         // HomeFragment sebagai fragment default
         replaceFragment(HomeFragment())
-
         binding.bottomNavView.setOnItemSelectedListener {
             when (it.itemId) {
                 R.id.home -> {
@@ -46,7 +41,6 @@ class BaseActivity : AppCompatActivity() {
             }
         }
     }
-
     private fun replaceFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
             .replace(binding.fragmentContainer.id, fragment)

@@ -17,10 +17,8 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 
 class HomeFragment : Fragment() {
-
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -28,7 +26,6 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
     }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -36,37 +33,31 @@ class HomeFragment : Fragment() {
         (requireActivity() as AppCompatActivity).supportActionBar?.apply {
             title = "Home"
         }
-
         // Tampilkan username dari SharedPreferences
         val sharedPref = requireContext().getSharedPreferences("user_pref", android.content.Context.MODE_PRIVATE)
         val username = sharedPref.getString("username", "User") ?: "User"
         binding.tvUsername.text = username
-
         binding.btnRumusBangunRuang.setOnClickListener {
             val intent = Intent(requireContext(), RumusBangunRuangActivity::class.java)
             intent.putExtra("judul_halaman", "Rumus Bangun Ruang")
             intent.putExtra("deskripsi", "Hitung luas segitiga dan volume bola")
             startActivity(intent)
         }
-
         binding.btnCustom1.setOnClickListener {
             val intent = Intent(requireContext(), CustomActivity1::class.java)
             intent.putExtra("judul_halaman", "Custom Screen 1")
             intent.putExtra("deskripsi", "Desain Figma dengan gambar ilustrasi kesehatan")
             startActivity(intent)
         }
-
         binding.btnCustom2.setOnClickListener {
             val intent = Intent(requireContext(), CustomActivity2::class.java)
             intent.putExtra("judul_halaman", "Custom Screen 2")
             intent.putExtra("deskripsi", "Desain Figma dengan tema olahraga")
             startActivity(intent)
         }
-
         binding.btnPertemuan5.setOnClickListener {
             startActivity(Intent(requireContext(), WebViewActivity::class.java))
         }
-
         binding.btnLogout.setOnClickListener {
             MaterialAlertDialogBuilder(requireContext())
                 .setTitle("Konfirmasi Logout")
@@ -88,7 +79,6 @@ class HomeFragment : Fragment() {
                 .show()
         }
     }
-
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
