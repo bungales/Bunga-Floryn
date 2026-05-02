@@ -42,7 +42,7 @@
                 android:id="@+id/tvAppTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="HealthTrack"
+                android:text="RuangKu"
                 android:textSize="28sp"
                 android:textColor="#FFFFFF"
                 android:fontFamily="@font/inter_variablefont_opsz_wght"

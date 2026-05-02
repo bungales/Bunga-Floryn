@@ -17,7 +17,7 @@
 
         <!-- SPLASH SCREEN sebagai halaman utama -->
         <activity
-            android:name=".pertemuan_6.SplashScreenActivity"
+            android:name=".Home.pertemuan_6.SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -37,28 +37,28 @@
 
         <!-- Pertemuan 3 -->
         <activity
-            android:name=".pertemuan_3.WelcomeActivity"
+            android:name=".Home.pertemuan_3.WelcomeActivity"
             android:exported="false" />
 
         <!-- Pertemuan 4 -->
         <activity
-            android:name=".pertemuan_4.CustomActivity1"
+            android:name=".Home.pertemuan_4.CustomActivity1"
             android:exported="false" />
         <activity
-            android:name=".pertemuan_4.CustomActivity2"
+            android:name=".Home.pertemuan_4.CustomActivity2"
             android:exported="false" />
 
         <!-- Pertemuan 5 -->
         <activity
-            android:name=".pertemuan_5.FifthActivity"
+            android:name=".Home.pertemuan_5.FifthActivity"
             android:exported="false" />
         <activity
-            android:name=".pertemuan_5.WebViewActivity"
+            android:name=".Home.pertemuan_5.WebViewActivity"
             android:exported="false" />
 
         <!-- Pertemuan 2 -->
         <activity
-            android:name=".pertemuan_2.MainActivity"
+            android:name=".Home.pertemuan_2.MainActivity"
             android:exported="false" />
 
         <!-- Main -->

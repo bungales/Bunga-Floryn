@@ -9,10 +9,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.bunga_floryn.AuthActivity
 import com.example.bunga_floryn.databinding.FragmentHomeBinding
-import com.example.bunga_floryn.pertemuan_2.MainActivity as RumusBangunRuangActivity
-import com.example.bunga_floryn.pertemuan_4.CustomActivity1
-import com.example.bunga_floryn.pertemuan_4.CustomActivity2
-import com.example.bunga_floryn.pertemuan_5.WebViewActivity
+import com.example.bunga_floryn.Home.pertemuan_2.MainActivity as RumusBangunRuangActivity
+import com.example.bunga_floryn.Home.pertemuan_4.CustomActivity1
+import com.example.bunga_floryn.Home.pertemuan_4.CustomActivity2
+import com.example.bunga_floryn.Home.pertemuan_5.WebViewActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 
