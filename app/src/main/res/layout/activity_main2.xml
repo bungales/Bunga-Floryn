@@ -26,7 +26,7 @@
         android:background="#F0FAFA">
 
         <Button
-            android:id="@+id/btnKembali"
+            android:id="@+id/btnKembali2"
             android:layout_width="0dp"
             android:layout_height="44dp"
             android:layout_weight="1"
@@ -40,7 +40,7 @@
             app:cornerRadius="14dp" />
 
         <Button
-            android:id="@+id/btnWebView"
+            android:id="@+id/btnWebView2"
             android:layout_width="0dp"
             android:layout_height="44dp"
             android:layout_weight="1"

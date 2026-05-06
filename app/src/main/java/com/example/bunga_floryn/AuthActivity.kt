@@ -3,7 +3,6 @@ package com.example.bunga_floryn
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.bunga_floryn.databinding.ActivityLoginBinding
 
@@ -39,13 +38,15 @@ class AuthActivity : AppCompatActivity() {
             finish()
         }
         binding.btnSignUp.setOnClickListener {
-            Toast.makeText(this, "Sign Up feature coming soon!", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
         }
         binding.tvForgotPassword.setOnClickListener {
             Toast.makeText(this, "Forgot Password feature coming soon!", Toast.LENGTH_SHORT).show()
         }
         binding.tvSignUpLink.setOnClickListener {
-            Toast.makeText(this, "Sign Up feature coming soon!", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
         }
     }
 }

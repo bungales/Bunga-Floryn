@@ -30,6 +30,11 @@
             android:name=".AuthActivity"
             android:exported="false" />
 
+        <!-- Register Activity -->
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+
         <!-- Base Activity dengan BottomNavigation -->
         <activity
             android:name=".BaseActivity"
