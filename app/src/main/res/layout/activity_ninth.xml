@@ -16,14 +16,24 @@
         android:background="?attr/colorPrimary"
         app:titleTextColor="@android:color/white"
         app:navigationIcon="@drawable/ic_arrow_back"
-        app:navigationContentDescription="Back"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Wave background header -->
+    <View
+        android:id="@+id/background_header"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:background="@drawable/bg_header_wave"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:fillViewport="true"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,219 +45,173 @@
             android:orientation="vertical"
             android:paddingBottom="24dp">
 
-            <!-- Section: TextInputLayout & MaterialButton -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1. TextInputLayout &amp; MaterialButton"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                android:textColor="#1565C0"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="8dp" />
-
-            <!-- TextInputLayout Email -->
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLayout"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            <!-- Header area di atas wave -->
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="16dp"
-                android:layout_marginTop="4dp"
-                android:hint="Email"
-                app:startIconDrawable="@drawable/ic_edit"
-                app:errorEnabled="true">
+                android:orientation="vertical"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="20dp">
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etEmail"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Daftar Penduduk"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Data warga yang terdaftar di sistem desa"
+                    android:textSize="12sp"
+                    android:textColor="#DDEEFF"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- Stat chips row -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipTotal"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10 Total"
+                        android:textColor="#FFFFFF"
+                        android:layout_marginEnd="6dp"
+                        app:chipBackgroundColor="#1976D2"
+                        app:chipStrokeColor="#FFFFFF"
+                        app:chipStrokeWidth="1dp"
+                        android:checkable="false" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipLakiStat"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5 Laki-laki"
+                        android:textColor="#FFFFFF"
+                        android:layout_marginEnd="6dp"
+                        app:chipBackgroundColor="#0D47A1"
+                        app:chipStrokeColor="#FFFFFF"
+                        app:chipStrokeWidth="1dp"
+                        android:checkable="false" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipPerempuanStat"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5 Perempuan"
+                        android:textColor="#FFFFFF"
+                        app:chipBackgroundColor="#0D47A1"
+                        app:chipStrokeColor="#FFFFFF"
+                        app:chipStrokeWidth="1dp"
+                        android:checkable="false" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Card putih konten utama -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F0FAFA"
+                android:orientation="vertical">
+
+                <!-- TextInputLayout Search (dengan background drawable) -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textEmailAddress" />
-            </com.google.android.material.textfield.TextInputLayout>
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="16dp"
+                    android:hint="Cari nama, NIK..."
+                    app:errorEnabled="false"
+                    app:startIconDrawable="@drawable/ic_search">
 
-            <!-- TextInputLayout Password -->
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tilPassword"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="16dp"
-                android:layout_marginTop="8dp"
-                android:hint="Password"
-                app:endIconMode="password_toggle"
-                app:errorEnabled="true"
-                app:counterEnabled="true"
-                app:counterMaxLength="20">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etSearch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionSearch"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etPassword"
+                <!-- ChipGroup Filter gender -->
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chipGroupFilter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="10dp"
+                    app:singleSelection="true">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipSemua"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="✓ Semua" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipLaki"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Laki-laki" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipPerempuan"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Perempuan" />
+                </com.google.android.material.chip.ChipGroup>
+
+                <!-- Label jumlah data -->
+                <TextView
+                    android:id="@+id/tvJumlahData"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="10 data"
+                    android:textColor="#757575"
+                    android:textSize="12sp" />
+
+                <!-- Section: ListView Warga -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="Data Warga Terdaftar"
+                    android:textColor="#1A1A2E"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <!-- ListView warga — non-scrollable, di dalam ScrollView -->
+                <ListView
+                    android:id="@+id/listViewWarga"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textPassword" />
-            </com.google.android.material.textfield.TextInputLayout>
+                    android:divider="#E0E0E0"
+                    android:dividerHeight="1dp"
+                    android:nestedScrollingEnabled="false"
+                    android:scrollbars="none" />
 
-            <!-- MaterialButton Login -->
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnLogin"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="16dp"
-                android:layout_marginTop="10dp"
-                android:text="Login"
-                app:icon="@drawable/ic_login"
-                app:iconGravity="textStart"
-                app:iconPadding="8dp"
-                app:cornerRadius="8dp" />
-
-            <!-- Section: Chip & ChipGroup -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="2. Chip &amp; ChipGroup"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                android:textColor="#1565C0"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="8dp" />
-
-            <com.google.android.material.chip.ChipGroup
-                android:id="@+id/chipGroupFilter"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="4dp"
-                app:singleSelection="true">
-
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/chipTerbaru"
-                    style="@style/Widget.MaterialComponents.Chip.Filter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:checked="true"
-                    android:text="Terbaru" />
-
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/chipPenting"
-                    style="@style/Widget.MaterialComponents.Chip.Filter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Penting" />
-
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/chipBelumDibaca"
-                    style="@style/Widget.MaterialComponents.Chip.Filter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Belum Dibaca" />
-
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/chipFavorit"
-                    style="@style/Widget.MaterialComponents.Chip.Filter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Favorit" />
-            </com.google.android.material.chip.ChipGroup>
-
-            <!-- Section: Background Drawable -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="3. Background Drawable (EditText)"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                android:textColor="#1565C0"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="8dp" />
-
-            <EditText
-                android:id="@+id/etNomorTelepon"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="16dp"
-                android:hint="Nomor Telepon"
-                android:background="@drawable/edit_text_background"
-                android:inputType="phone" />
-
-            <!-- Section: GridLayout -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="4. GridLayout (6 Menu)"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                android:textColor="#1565C0"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="8dp" />
-
-            <androidx.gridlayout.widget.GridLayout
-                android:id="@+id/gridLayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="16dp"
-                android:padding="4dp"
-                app:columnCount="3"
-                app:useDefaultMargins="true">
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnMenu1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Beranda"
-                    app:layout_columnWeight="1"
-                    app:layout_gravity="fill_horizontal"
-                    app:cornerRadius="8dp" />
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnMenu2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Profil"
-                    app:layout_columnWeight="1"
-                    app:layout_gravity="fill_horizontal"
-                    app:cornerRadius="8dp" />
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnMenu3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Notifikasi"
-                    app:layout_columnWeight="1"
-                    app:layout_gravity="fill_horizontal"
-                    app:cornerRadius="8dp" />
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnMenu4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Riwayat"
-                    app:layout_columnWeight="1"
-                    app:layout_gravity="fill_horizontal"
-                    app:cornerRadius="8dp" />
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnMenu5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Pengaturan"
-                    app:layout_columnWeight="1"
-                    app:layout_gravity="fill_horizontal"
-                    app:cornerRadius="8dp" />
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnMenu6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Bantuan"
-                    app:layout_columnWeight="1"
-                    app:layout_gravity="fill_horizontal"
-                    app:cornerRadius="8dp" />
-
-            </androidx.gridlayout.widget.GridLayout>
-
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 

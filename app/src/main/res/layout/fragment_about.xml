@@ -116,7 +116,7 @@
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
-    <!-- Fitur Utama -->
+    <!-- Fitur Utama — GridLayout -->
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cardFiturUtama"
         android:layout_width="0dp"
@@ -141,81 +141,145 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="⚡ Fitur Utama"
-                android:textSize="12sp"
+                android:textSize="13sp"
                 android:textColor="#1565C0"
                 android:fontFamily="@font/inter_variablefont_opsz_wght"
                 android:textStyle="bold"
-                android:layout_marginBottom="8dp" />
+                android:layout_marginBottom="10dp" />
 
-            <!-- Baris 1 -->
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:orientation="horizontal" android:layout_marginBottom="6dp">
+            <androidx.gridlayout.widget.GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:columnCount="2"
+                app:useDefaultMargins="true">
 
-                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
-                    android:layout_weight="1" android:orientation="horizontal" android:gravity="center_vertical">
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                        android:text="🏛️ " android:textSize="12sp" />
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                        android:text="Fasilitas Umum" android:textSize="11sp" android:textColor="#1A1A2E"
-                        android:fontFamily="@font/inter_variablefont_opsz_wght" android:textStyle="bold" />
-                </LinearLayout>
+                <!-- Fasilitas Umum -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardFasilitasUmum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="2dp"
+                    app:cardBackgroundColor="#EEF2FF"
+                    app:layout_columnWeight="1"
+                    app:layout_gravity="fill_horizontal">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="72dp"
+                        android:orientation="vertical" android:gravity="center" android:padding="8dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="🏛️" android:textSize="22sp" android:gravity="center" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Fasilitas Umum" android:textSize="11sp" android:textColor="#1565C0"
+                            android:textStyle="bold" android:gravity="center" android:layout_marginTop="4dp"
+                            android:fontFamily="@font/inter_variablefont_opsz_wght" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
 
-                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
-                    android:layout_weight="1" android:orientation="horizontal" android:gravity="center_vertical">
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                        android:text="🤝 " android:textSize="12sp" />
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                        android:text="Peminjaman Fasilitas" android:textSize="11sp" android:textColor="#1A1A2E"
-                        android:fontFamily="@font/inter_variablefont_opsz_wght" android:textStyle="bold" />
-                </LinearLayout>
-            </LinearLayout>
+                <!-- Peminjaman Fasilitas -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardPeminjaman"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="2dp"
+                    app:cardBackgroundColor="#EEF2FF"
+                    app:layout_columnWeight="1"
+                    app:layout_gravity="fill_horizontal">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="72dp"
+                        android:orientation="vertical" android:gravity="center" android:padding="8dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="🤝" android:textSize="22sp" android:gravity="center" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Peminjaman" android:textSize="11sp" android:textColor="#1565C0"
+                            android:textStyle="bold" android:gravity="center" android:layout_marginTop="4dp"
+                            android:fontFamily="@font/inter_variablefont_opsz_wght" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
 
-            <!-- Baris 2 -->
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:orientation="horizontal" android:layout_marginBottom="6dp">
+                <!-- Pembayaran Fasilitas -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardPembayaran"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="2dp"
+                    app:cardBackgroundColor="#EEF2FF"
+                    app:layout_columnWeight="1"
+                    app:layout_gravity="fill_horizontal">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="72dp"
+                        android:orientation="vertical" android:gravity="center" android:padding="8dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="💳" android:textSize="22sp" android:gravity="center" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Pembayaran" android:textSize="11sp" android:textColor="#1565C0"
+                            android:textStyle="bold" android:gravity="center" android:layout_marginTop="4dp"
+                            android:fontFamily="@font/inter_variablefont_opsz_wght" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
 
-                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
-                    android:layout_weight="1" android:orientation="horizontal" android:gravity="center_vertical">
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                        android:text="💳 " android:textSize="12sp" />
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                        android:text="Pembayaran Fasilitas" android:textSize="11sp" android:textColor="#1A1A2E"
-                        android:fontFamily="@font/inter_variablefont_opsz_wght" android:textStyle="bold" />
-                </LinearLayout>
+                <!-- Syarat Fasilitas -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardSyarat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="2dp"
+                    app:cardBackgroundColor="#EEF2FF"
+                    app:layout_columnWeight="1"
+                    app:layout_gravity="fill_horizontal">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="72dp"
+                        android:orientation="vertical" android:gravity="center" android:padding="8dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="📋" android:textSize="22sp" android:gravity="center" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Syarat Fasilitas" android:textSize="11sp" android:textColor="#1565C0"
+                            android:textStyle="bold" android:gravity="center" android:layout_marginTop="4dp"
+                            android:fontFamily="@font/inter_variablefont_opsz_wght" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
 
-                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
-                    android:layout_weight="1" android:orientation="horizontal" android:gravity="center_vertical">
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                        android:text="📋 " android:textSize="12sp" />
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                        android:text="Syarat Fasilitas" android:textSize="11sp" android:textColor="#1A1A2E"
-                        android:fontFamily="@font/inter_variablefont_opsz_wght" android:textStyle="bold" />
-                </LinearLayout>
-            </LinearLayout>
+                <!-- Petugas Fasilitas -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardPetugas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="2dp"
+                    app:cardBackgroundColor="#EEF2FF"
+                    app:layout_columnWeight="1"
+                    app:layout_gravity="fill_horizontal">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="72dp"
+                        android:orientation="vertical" android:gravity="center" android:padding="8dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="👮" android:textSize="22sp" android:gravity="center" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Petugas Fasilitas" android:textSize="11sp" android:textColor="#1565C0"
+                            android:textStyle="bold" android:gravity="center" android:layout_marginTop="4dp"
+                            android:fontFamily="@font/inter_variablefont_opsz_wght" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
 
-            <!-- Baris 3 -->
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                <!-- Data Warga -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardDataWarga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="2dp"
+                    app:cardBackgroundColor="#EEF2FF"
+                    app:layout_columnWeight="1"
+                    app:layout_gravity="fill_horizontal">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="72dp"
+                        android:orientation="vertical" android:gravity="center" android:padding="8dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="👥" android:textSize="22sp" android:gravity="center" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Data Warga" android:textSize="11sp" android:textColor="#1565C0"
+                            android:textStyle="bold" android:gravity="center" android:layout_marginTop="4dp"
+                            android:fontFamily="@font/inter_variablefont_opsz_wght" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
 
-                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
-                    android:layout_weight="1" android:orientation="horizontal" android:gravity="center_vertical">
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                        android:text="👮 " android:textSize="12sp" />
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                        android:text="Petugas Fasilitas" android:textSize="11sp" android:textColor="#1A1A2E"
-                        android:fontFamily="@font/inter_variablefont_opsz_wght" android:textStyle="bold" />
-                </LinearLayout>
-
-                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
-                    android:layout_weight="1" android:orientation="horizontal" android:gravity="center_vertical">
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                        android:text="👥 " android:textSize="12sp" />
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                        android:text="Data Warga" android:textSize="11sp" android:textColor="#1A1A2E"
-                        android:fontFamily="@font/inter_variablefont_opsz_wght" android:textStyle="bold" />
-                </LinearLayout>
-            </LinearLayout>
-
+            </androidx.gridlayout.widget.GridLayout>
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 

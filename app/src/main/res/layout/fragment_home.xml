@@ -220,7 +220,7 @@
                     android:layout_height="50dp"
                     android:layout_marginBottom="10dp"
                     android:backgroundTint="#1565C0"
-                    android:text="🎨  Pertemuan 9 — UI Components"
+                    android:text="👥  Data Warga"
                     android:textColor="#FFFFFF"
                     android:textSize="13sp"
                     android:textStyle="bold"

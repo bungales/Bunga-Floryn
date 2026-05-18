@@ -15,16 +15,15 @@ class SettingsFragment : Fragment() {
     private var _binding: FragmentSettingsBinding? = null
     private val binding get() = _binding!!
     private val settingsList = listOf(
-        SettingsModel("Akun Saya", "Kelola informasi akun dan keamanan", R.drawable.ic_profile),
-        SettingsModel("Notifikasi", "Atur preferensi notifikasi aplikasi", R.drawable.ic_home),
-        SettingsModel("Privasi & Keamanan", "Kebijakan privasi dan pengaturan keamanan", R.drawable.ic_about),
-        SettingsModel("Tampilan", "Tema, ukuran font, dan bahasa", R.drawable.ic_settings),
-        SettingsModel("Bantuan & FAQ", "Pertanyaan umum dan panduan penggunaan", R.drawable.ic_about),
-        SettingsModel("Hubungi Kami", "Kirim masukan atau laporkan masalah", R.drawable.ic_profile),
-        SettingsModel("Tentang Aplikasi", "Versi aplikasi, lisensi, dan informasi developer", R.drawable.ic_home),
-        SettingsModel("Syarat & Ketentuan", "Baca syarat penggunaan layanan", R.drawable.ic_about),
-        SettingsModel("Kebijakan Cookie", "Penggunaan cookie dalam aplikasi", R.drawable.ic_settings),
-        SettingsModel("Hapus Akun", "Hapus akun dan semua data secara permanen", R.drawable.ic_profile)
+        SettingsModel("Akun Saya",          "Kelola informasi profil dan keamanan akun",         R.drawable.ic_person),
+        SettingsModel("Notifikasi",          "Atur notifikasi peminjaman dan pembayaran",          R.drawable.ic_bell),
+        SettingsModel("Privasi & Keamanan",  "Kebijakan privasi dan pengaturan keamanan data",    R.drawable.ic_lock),
+        SettingsModel("Bantuan & FAQ",       "Panduan penggunaan sistem fasilitas desa",           R.drawable.ic_help),
+        SettingsModel("Hubungi Kami",        "Kirim masukan atau laporkan kendala sistem",         R.drawable.ic_mail),
+        SettingsModel("Tentang Aplikasi",    "Sistem Pengelolaan Fasilitas Desa — v1.0.0",        R.drawable.ic_info),
+        SettingsModel("Syarat & Ketentuan",  "Baca syarat penggunaan layanan Bina Desa",          R.drawable.ic_doc),
+        SettingsModel("Kebijakan Privasi",   "Cara kami mengelola dan melindungi data Anda",      R.drawable.ic_lock),
+        SettingsModel("Hapus Akun",          "Hapus akun dan semua data secara permanen",         R.drawable.ic_delete)
     )
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
