@@ -44,6 +44,16 @@
 
     </androidx.appcompat.widget.Toolbar>
 
+    <!-- Wave background — diposisikan tepat di bawah toolbar -->
+    <View
+        android:id="@+id/background_header"
+        android:layout_width="0dp"
+        android:layout_height="140dp"
+        android:background="@drawable/bg_header_wave"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -57,27 +67,26 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- Header -->
+            <!-- Header area — transparan, wave di belakangnya -->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="160dp"
+                android:layout_height="110dp"
                 android:orientation="vertical"
                 android:gravity="center"
-                android:background="#1565C0"
-                android:paddingBottom="28dp">
+                android:paddingBottom="8dp">
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="72dp"
-                    android:layout_height="72dp"
-                    app:cardCornerRadius="36dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    app:cardCornerRadius="30dp"
                     app:cardElevation="6dp"
                     app:cardBackgroundColor="#FFFFFF"
-                    android:layout_marginBottom="10dp">
+                    android:layout_marginBottom="6dp">
 
                     <ImageView
                         android:id="@+id/ivLogo"
-                        android:layout_width="52dp"
-                        android:layout_height="52dp"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
                         android:src="@drawable/logo"
                         android:scaleType="fitCenter"
                         android:layout_gravity="center" />
@@ -87,7 +96,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Sistem Pengelolaan Fasilitas Desa"
-                    android:textSize="14sp"
+                    android:textSize="12sp"
                     android:textColor="#FFFFFF"
                     android:fontFamily="@font/inter_variablefont_opsz_wght"
                     android:textStyle="bold" />
@@ -200,6 +209,18 @@
                     android:layout_marginBottom="10dp"
                     android:backgroundTint="#0D47A1"
                     android:text="🌐  Buka Web Bina Desa"
+                    android:textColor="#FFFFFF"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="14dp" />
+
+                <Button
+                    android:id="@+id/btnPertemuan9"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:backgroundTint="#1565C0"
+                    android:text="🎨  Pertemuan 9 — UI Components"
                     android:textColor="#FFFFFF"
                     android:textSize="13sp"
                     android:textStyle="bold"

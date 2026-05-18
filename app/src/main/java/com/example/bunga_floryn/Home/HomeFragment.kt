@@ -13,6 +13,7 @@ import com.example.bunga_floryn.Home.pertemuan_2.MainActivity as RumusBangunRuan
 import com.example.bunga_floryn.Home.pertemuan_4.CustomActivity1
 import com.example.bunga_floryn.Home.pertemuan_4.CustomActivity2
 import com.example.bunga_floryn.Home.pertemuan_5.WebViewActivity
+import com.example.bunga_floryn.Home.pertemuan_9.NinthActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 
@@ -57,6 +58,9 @@ class HomeFragment : Fragment() {
         }
         binding.btnPertemuan5.setOnClickListener {
             startActivity(Intent(requireContext(), WebViewActivity::class.java))
+        }
+        binding.btnPertemuan9.setOnClickListener {
+            startActivity(Intent(requireContext(), NinthActivity::class.java))
         }
         binding.btnLogout.setOnClickListener {
             MaterialAlertDialogBuilder(requireContext())

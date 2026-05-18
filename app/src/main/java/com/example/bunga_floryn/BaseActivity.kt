@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import com.example.bunga_floryn.About.AboutFragment
 import com.example.bunga_floryn.Home.HomeFragment
 import com.example.bunga_floryn.Profile.ProfileFragment
+import com.example.bunga_floryn.Settings.SettingsFragment
 import com.example.bunga_floryn.databinding.ActivityBaseBinding
 
 class BaseActivity : AppCompatActivity() {
@@ -35,6 +36,10 @@ class BaseActivity : AppCompatActivity() {
                 }
                 R.id.profile -> {
                     replaceFragment(ProfileFragment())
+                    true
+                }
+                R.id.settings -> {
+                    replaceFragment(SettingsFragment())
                     true
                 }
                 else -> false
