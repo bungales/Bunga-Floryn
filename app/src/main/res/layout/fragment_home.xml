@@ -226,6 +226,18 @@
                     android:textStyle="bold"
                     app:cornerRadius="14dp" />
 
+                <Button
+                    android:id="@+id/btnPertemuan10"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="20dp"
+                    android:backgroundTint="#1976D2"
+                    android:text="🗂️  Fasilitas &amp; Kegiatan (Tabs)"
+                    android:textColor="#FFFFFF"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="14dp" />
+
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

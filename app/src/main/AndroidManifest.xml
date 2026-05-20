@@ -76,6 +76,11 @@
             android:name=".Home.pertemuan_9.NinthActivity"
             android:exported="false" />
 
+        <!-- Pertemuan 10 -->
+        <activity
+            android:name=".Home.pertemuan_10.TenthActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>
