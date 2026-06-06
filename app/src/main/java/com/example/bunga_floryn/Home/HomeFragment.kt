@@ -7,7 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.bunga_floryn.AuthActivity
+import com.example.bunga_floryn.data.BeritaRepository
 import com.example.bunga_floryn.databinding.FragmentHomeBinding
 import com.example.bunga_floryn.Home.pertemuan_2.MainActivity as RumusBangunRuangActivity
 import com.example.bunga_floryn.Home.pertemuan_4.CustomActivity1
@@ -66,6 +68,12 @@ class HomeFragment : Fragment() {
         binding.btnPertemuan10.setOnClickListener {
             startActivity(Intent(requireContext(), TenthActivity::class.java))
         }
+        // Load berita fasilitas desa
+        val beritaList = BeritaRepository.getBeritaDesa()
+        val beritaAdapter = BeritaAdapter(beritaList)
+        binding.rvBerita.adapter = beritaAdapter
+        binding.rvBerita.layoutManager = LinearLayoutManager(requireContext())
+        binding.rvBerita.isNestedScrollingEnabled = false
         binding.btnLogout.setOnClickListener {
             MaterialAlertDialogBuilder(requireContext())
                 .setTitle("Konfirmasi Logout")

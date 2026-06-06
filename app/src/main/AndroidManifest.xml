@@ -25,6 +25,11 @@
             </intent-filter>
         </activity>
 
+        <!-- Onboarding -->
+        <activity
+            android:name=".Onboarding.OnboardingActivity"
+            android:exported="false" />
+
         <!-- Auth (Login RuangKu) - sejajar MainActivity -->
         <activity
             android:name=".AuthActivity"
