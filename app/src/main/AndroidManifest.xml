@@ -86,6 +86,16 @@
             android:name=".Home.pertemuan_10.TenthActivity"
             android:exported="false" />
 
+        <!-- Room: Note -->
+        <activity
+            android:name=".Note.NoteFormActivity"
+            android:exported="false" />
+
+        <!-- Room: Warga -->
+        <activity
+            android:name=".Warga.WargaFormActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>
