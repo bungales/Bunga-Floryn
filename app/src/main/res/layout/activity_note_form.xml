@@ -61,6 +61,29 @@
                     android:inputType="textMultiLine" />
             </com.google.android.material.textfield.TextInputLayout>
 
+            <!-- Reminder -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⏰ Atur Pengingat (opsional)"
+                android:textSize="12sp"
+                android:textColor="#757575"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="4dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ingatkan saya dalam ... menit (kosongkan jika tidak perlu)">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etReminderMenit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLength="3" />
+            </com.google.android.material.textfield.TextInputLayout>
+
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 

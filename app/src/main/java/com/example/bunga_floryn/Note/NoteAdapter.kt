@@ -25,6 +25,13 @@ class NoteAdapter(
         holder.binding.tvTitle.text = note.title
         holder.binding.tvContent.text = note.content
 
+        // Tampilkan badge reminder kalau note punya reminder
+        if (note.reminderAt != null && note.reminderAt > System.currentTimeMillis()) {
+            holder.binding.tvReminderBadge.visibility = android.view.View.VISIBLE
+        } else {
+            holder.binding.tvReminderBadge.visibility = android.view.View.GONE
+        }
+
         holder.binding.btnDelete.setOnClickListener {
             MaterialAlertDialogBuilder(holder.itemView.context)
                 .setTitle("Hapus Catatan")

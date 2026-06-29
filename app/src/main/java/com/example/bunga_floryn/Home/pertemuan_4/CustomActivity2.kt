@@ -1,37 +1,24 @@
 package com.example.bunga_floryn.Home.pertemuan_4
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
-import android.widget.Button
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
-import com.example.bunga_floryn.R
-import com.example.bunga_floryn.Home.pertemuan_5.WebViewActivity
+import com.example.bunga_floryn.databinding.ActivityCustom2Binding
 
 class CustomActivity2 : AppCompatActivity() {
 
+    private lateinit var binding: ActivityCustom2Binding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_custom2)
+        binding = ActivityCustom2Binding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        val judul = intent.getStringExtra("judul_halaman") ?: "Home Dashboard"
-        val deskripsi = intent.getStringExtra("deskripsi") ?: "Terapkan gaya hidup sehat"
-
-        val toolbar = findViewById<Toolbar>(R.id.toolbar)
-        setSupportActionBar(toolbar)
+        setSupportActionBar(binding.toolbar)
         supportActionBar?.apply {
-            title = judul
+            title = "Tips Hidup Sehat"
+            subtitle = "Untuk Warga Desa"
             setDisplayHomeAsUpEnabled(true)
-            setDisplayShowHomeEnabled(true)
-        }
-
-        findViewById<TextView>(R.id.tvJudulHalaman).text = judul
-        findViewById<TextView>(R.id.tvDeskripsiDariUtama).text = deskripsi
-
-        findViewById<Button>(R.id.btnWebView).setOnClickListener {
-            startActivity(Intent(this, WebViewActivity::class.java))
         }
     }
 

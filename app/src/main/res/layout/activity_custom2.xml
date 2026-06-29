@@ -4,196 +4,64 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#F0FAFA">
+    android:background="#F0F4FF">
 
     <!-- Toolbar -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        app:titleTextColor="@android:color/white" />
-
-    <!-- Top Bar -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"
-        android:paddingTop="16dp"
-        android:paddingBottom="12dp"
-        android:background="#F0FAFA">
-
-        <!-- Tombol Back -->
-        <ImageView
-            android:id="@+id/btnBack"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:src="@android:drawable/ic_media_previous"
-            
-            android:background="#E3EEFF"
-            android:padding="6dp"
-            android:layout_marginEnd="8dp" />
-
-        <ImageView
-            android:layout_width="22dp"
-            android:layout_height="22dp"
-            android:src="@android:drawable/ic_lock_silent_mode_off"
-            
-            android:layout_marginEnd="12dp" />
-
-        <ImageView
-            android:layout_width="22dp"
-            android:layout_height="22dp"
-            android:src="@android:drawable/ic_menu_preferences"
-            
-            android:layout_marginEnd="12dp" />
-
-        <ImageView
-            android:layout_width="22dp"
-            android:layout_height="22dp"
-            android:src="@android:drawable/ic_menu_search"
-             />
-
-        <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="end"
-            android:layout_marginEnd="10dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Hi, WelcomeBack"
-                android:textSize="11sp"
-                android:textColor="#757575" />
-
-            <TextView
-                android:id="@+id/tvJudulHalaman"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Jane Doe"
-                android:textSize="14sp"
-                android:textColor="#333333"
-                android:textStyle="bold" />
-        </LinearLayout>
-
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@android:drawable/ic_menu_myplaces"
-             />
-    </LinearLayout>
+        android:background="#1565C0"
+        app:titleTextColor="@android:color/white"
+        app:subtitleTextColor="#B3C6FF" />
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- Categories -->
+            <!-- Header -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp"
+                android:orientation="vertical"
+                android:background="#1565C0"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
                 android:paddingTop="8dp"
-                android:paddingBottom="8dp">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Categories"
-                    android:textSize="16sp"
-                    android:textColor="#1565C0"
-                    android:textStyle="bold" />
+                android:paddingBottom="28dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="See all"
+                    android:text="💪 Tips Hidup Sehat"
+                    android:textSize="20sp"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="4dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Panduan kesehatan untuk warga desa"
                     android:textSize="12sp"
-                    android:textColor="#1565C0" />
+                    android:textColor="#B3C6FF" />
             </LinearLayout>
 
-            <!-- Category Icons Row -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:paddingStart="8dp"
-                android:paddingEnd="8dp"
-                android:paddingBottom="12dp">
-
-                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
-                    android:layout_weight="1" android:orientation="vertical" android:gravity="center">
-                    <ImageView android:layout_width="28dp" android:layout_height="28dp"
-                        android:src="@android:drawable/btn_star_big_on"  />
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                        android:text="Favorite" android:textSize="10sp" android:textColor="#757575"
-                        android:layout_marginTop="4dp" />
-                </LinearLayout>
-
-                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
-                    android:layout_weight="1" android:orientation="vertical" android:gravity="center">
-                    <ImageView android:layout_width="28dp" android:layout_height="28dp"
-                        android:src="@drawable/logo"  />
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                        android:text="Doctors" android:textSize="10sp" android:textColor="#757575"
-                        android:layout_marginTop="4dp" />
-                </LinearLayout>
-
-                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
-                    android:layout_weight="1" android:orientation="vertical" android:gravity="center">
-                    <ImageView android:layout_width="28dp" android:layout_height="28dp"
-                        android:src="@android:drawable/ic_menu_add"  />
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                        android:text="Pharmacy" android:textSize="10sp" android:textColor="#757575"
-                        android:layout_marginTop="4dp" />
-                </LinearLayout>
-
-                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
-                    android:layout_weight="1" android:orientation="vertical" android:gravity="center">
-                    <ImageView android:layout_width="28dp" android:layout_height="28dp"
-                        android:src="@android:drawable/ic_menu_compass"  />
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                        android:text="Specialties" android:textSize="10sp" android:textColor="#757575"
-                        android:layout_marginTop="4dp" />
-                </LinearLayout>
-
-                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
-                    android:layout_weight="1" android:orientation="vertical" android:gravity="center">
-                    <ImageView android:layout_width="28dp" android:layout_height="28dp"
-                        android:src="@android:drawable/ic_menu_agenda"  />
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                        android:text="Record" android:textSize="10sp" android:textColor="#757575"
-                        android:layout_marginTop="4dp" />
-                </LinearLayout>
-            </LinearLayout>
-
-            <!-- Upcoming Schedule Card -->
+            <!-- Kategori Tabs Card -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
+                android:layout_marginTop="-20dp"
                 android:layout_marginBottom="16dp"
                 app:cardCornerRadius="20dp"
-                app:cardBackgroundColor="#1565C0"
-                app:cardElevation="4dp">
+                app:cardElevation="6dp"
+                app:cardBackgroundColor="#FFFFFF">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -201,373 +69,372 @@
                     android:orientation="vertical"
                     android:padding="16dp">
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kategori Tips"
+                        android:textSize="13sp"
+                        android:textColor="#1565C0"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="12dp" />
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center_vertical"
-                        android:layout_marginBottom="12dp">
+                        android:orientation="horizontal">
 
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Upcoming Schedule"
-                            android:textSize="14sp"
-                            android:textColor="#FFFFFF"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Month"
-                            android:textSize="12sp"
-                            android:textColor="#E3EEFF" />
-                    </LinearLayout>
-
-                    <!-- Date Row -->
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center"
-                        android:layout_marginBottom="12dp">
-
-                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
-                            android:layout_weight="1" android:orientation="vertical" android:gravity="center">
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                android:text="9" android:textSize="16sp" android:textColor="#E3EEFF" android:textStyle="bold" />
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                android:text="MON" android:textSize="9sp" android:textColor="#E3EEFF" />
-                        </LinearLayout>
-
-                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
-                            android:layout_weight="1" android:orientation="vertical" android:gravity="center">
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                android:text="10" android:textSize="16sp" android:textColor="#E3EEFF" android:textStyle="bold" />
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                android:text="TUE" android:textSize="9sp" android:textColor="#E3EEFF" />
-                        </LinearLayout>
-
-                        <!-- Active date -->
-                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
-                            android:layout_weight="1" android:orientation="vertical" android:gravity="center"
-                            android:background="#FFFFFF" android:padding="6dp">
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                android:text="11" android:textSize="16sp" android:textColor="#1565C0" android:textStyle="bold" />
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                android:text="WED" android:textSize="9sp" android:textColor="#1565C0" />
-                        </LinearLayout>
-
-                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
-                            android:layout_weight="1" android:orientation="vertical" android:gravity="center">
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                android:text="12" android:textSize="16sp" android:textColor="#E3EEFF" android:textStyle="bold" />
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                android:text="THU" android:textSize="9sp" android:textColor="#E3EEFF" />
-                        </LinearLayout>
-
-                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
-                            android:layout_weight="1" android:orientation="vertical" android:gravity="center">
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                android:text="13" android:textSize="16sp" android:textColor="#E3EEFF" android:textStyle="bold" />
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                android:text="FRI" android:textSize="9sp" android:textColor="#E3EEFF" />
-                        </LinearLayout>
-
-                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
-                            android:layout_weight="1" android:orientation="vertical" android:gravity="center">
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                android:text="14" android:textSize="16sp" android:textColor="#E3EEFF" android:textStyle="bold" />
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                android:text="SAT" android:textSize="9sp" android:textColor="#E3EEFF" />
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    <!-- Schedule List -->
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:background="#33FFFFFF"
-                        android:padding="12dp">
-
+                        <!-- Makan Sehat -->
                         <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:gravity="end"
-                            android:layout_marginBottom="8dp">
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="See all"
-                                android:textSize="11sp"
-                                android:textColor="#E3EEFF" />
+                            android:layout_width="0dp"
+                            android:layout_height="72dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:background="#E8F0FE"
+                            android:layout_marginEnd="6dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="🥗" android:textSize="22sp" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="Makan" android:textSize="10sp" android:textColor="#1565C0"
+                                android:textStyle="bold" android:layout_marginTop="4dp" />
                         </LinearLayout>
 
-                        <View android:layout_width="match_parent" android:layout_height="1dp"
-                            android:background="#66FFFFFF" android:layout_marginBottom="8dp" />
+                        <!-- Olahraga -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="72dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:background="#E8F5E9"
+                            android:layout_marginEnd="6dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="🏃" android:textSize="22sp" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="Olahraga" android:textSize="10sp" android:textColor="#2E7D32"
+                                android:textStyle="bold" android:layout_marginTop="4dp" />
+                        </LinearLayout>
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="• 11 Month - Wednesday - Today"
-                            android:textSize="11sp"
-                            android:textColor="#E3EEFF" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="  10:00 am    Dr. Olivia Turner"
-                            android:textSize="13sp"
-                            android:textColor="#FFFFFF"
-                            android:textStyle="bold"
-                            android:layout_marginBottom="8dp" />
+                        <!-- Tidur -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="72dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:background="#FFF8E1"
+                            android:layout_marginEnd="6dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="😴" android:textSize="22sp" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="Istirahat" android:textSize="10sp" android:textColor="#F57F17"
+                                android:textStyle="bold" android:layout_marginTop="4dp" />
+                        </LinearLayout>
 
-                        <View android:layout_width="match_parent" android:layout_height="1dp"
-                            android:background="#66FFFFFF" android:layout_marginBottom="8dp" />
+                        <!-- Mental -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="72dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:background="#FCE4EC">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="🧘" android:textSize="22sp" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="Mental" android:textSize="10sp" android:textColor="#C62828"
+                                android:textStyle="bold" android:layout_marginTop="4dp" />
+                        </LinearLayout>
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="• 16 Month - Monday"
-                            android:textSize="11sp"
-                            android:textColor="#E3EEFF" />
-                        <TextView
-                            android:id="@+id/tvDeskripsiDariUtama"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="  08:00 am    Dr. Alexander Bennett"
-                            android:textSize="13sp"
-                            android:textColor="#FFFFFF"
-                            android:textStyle="bold" />
                     </LinearLayout>
-
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Specialties Section -->
-            <LinearLayout
+            <!-- Tips Makan Sehat -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🥗 Pola Makan Sehat"
+                android:textSize="14sp"
+                android:textColor="#1565C0"
+                android:textStyle="bold"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="10dp" />
+
+            <!-- Tip Card 1 -->
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp"
-                android:paddingBottom="8dp">
-
-                <TextView
-                    android:layout_width="0dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="3dp"
+                app:cardBackgroundColor="#FFFFFF">
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Specialties"
-                    android:textSize="16sp"
-                    android:textColor="#1565C0"
-                    android:textStyle="bold" />
+                    android:orientation="horizontal"
+                    android:padding="14dp"
+                    android:gravity="center_vertical">
+                    <TextView android:layout_width="40dp" android:layout_height="40dp"
+                        android:text="🥦" android:textSize="22sp" android:gravity="center" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="12dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Konsumsi Sayur &amp; Buah" android:textSize="13sp"
+                            android:textColor="#212121" android:textStyle="bold" android:layout_marginBottom="3dp" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Makan minimal 5 porsi sayur dan buah setiap hari untuk kebutuhan vitamin dan serat tubuh."
+                            android:textSize="11sp" android:textColor="#757575" android:lineSpacingExtra="3dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
 
-                <TextView
-                    android:layout_width="wrap_content"
+            <!-- Tip Card 2 -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="3dp"
+                app:cardBackgroundColor="#FFFFFF">
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="See all"
-                    android:textSize="12sp"
-                    android:textColor="#1565C0" />
-            </LinearLayout>
+                    android:orientation="horizontal"
+                    android:padding="14dp"
+                    android:gravity="center_vertical">
+                    <TextView android:layout_width="40dp" android:layout_height="40dp"
+                        android:text="💧" android:textSize="22sp" android:gravity="center" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="12dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Minum Air Putih Cukup" android:textSize="13sp"
+                            android:textColor="#212121" android:textStyle="bold" android:layout_marginBottom="3dp" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Minum minimal 8 gelas (2 liter) air putih per hari. Hindari minuman manis berlebihan."
+                            android:textSize="11sp" android:textColor="#757575" android:lineSpacingExtra="3dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
 
-            <!-- Specialties Grid Row 1 -->
-            <LinearLayout
+            <!-- Tip Card 3 -->
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingStart="12dp"
-                android:paddingEnd="12dp"
-                android:layout_marginBottom="8dp">
-
-                <com.google.android.material.card.MaterialCardView
-                    android:layout_width="0dp"
-                    android:layout_height="90dp"
-                    android:layout_weight="1"
-                    android:layout_marginEnd="6dp"
-                    app:cardCornerRadius="14dp"
-                    app:cardBackgroundColor="#1565C0">
-                    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
-                        android:orientation="vertical" android:gravity="center">
-                        <ImageView android:layout_width="32dp" android:layout_height="32dp"
-                            android:src="@drawable/logo" android:tint="#FFFFFF"
-                            android:layout_marginBottom="6dp" />
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="3dp"
+                app:cardBackgroundColor="#FFFFFF">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="14dp"
+                    android:gravity="center_vertical">
+                    <TextView android:layout_width="40dp" android:layout_height="40dp"
+                        android:text="🍚" android:textSize="22sp" android:gravity="center" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="12dp">
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                            android:text="Cardiology" android:textColor="#FFFFFF" android:textSize="11sp"
-                            android:textStyle="bold" />
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
-
-                <com.google.android.material.card.MaterialCardView
-                    android:layout_width="0dp"
-                    android:layout_height="90dp"
-                    android:layout_weight="1"
-                    android:layout_marginEnd="6dp"
-                    app:cardCornerRadius="14dp"
-                    app:cardBackgroundColor="#1565C0">
-                    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
-                        android:orientation="vertical" android:gravity="center">
-                        <ImageView android:layout_width="32dp" android:layout_height="32dp"
-                            android:src="@drawable/logo" android:tint="#FFFFFF"
-                            android:layout_marginBottom="6dp" />
+                            android:text="Kurangi Gula &amp; Garam" android:textSize="13sp"
+                            android:textColor="#212121" android:textStyle="bold" android:layout_marginBottom="3dp" />
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                            android:text="Dermatology" android:textColor="#FFFFFF" android:textSize="11sp"
-                            android:textStyle="bold" />
+                            android:text="Batasi konsumsi gula harian &lt;50g dan garam &lt;5g. Gunakan rempah alami sebagai perisa."
+                            android:textSize="11sp" android:textColor="#757575" android:lineSpacingExtra="3dp" />
                     </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
 
-                <com.google.android.material.card.MaterialCardView
-                    android:layout_width="0dp"
-                    android:layout_height="90dp"
-                    android:layout_weight="1"
-                    app:cardCornerRadius="14dp"
-                    app:cardBackgroundColor="#1565C0">
-                    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
-                        android:orientation="vertical" android:gravity="center">
-                        <ImageView android:layout_width="32dp" android:layout_height="32dp"
-                            android:src="@drawable/logo" android:tint="#FFFFFF"
-                            android:layout_marginBottom="6dp" />
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                            android:text="General\nMedicine" android:textColor="#FFFFFF" android:textSize="11sp"
-                            android:textStyle="bold" android:gravity="center" />
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
-            </LinearLayout>
+            <!-- Tips Olahraga -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🏃 Aktivitas Fisik"
+                android:textSize="14sp"
+                android:textColor="#2E7D32"
+                android:textStyle="bold"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="10dp" />
 
-            <!-- Specialties Grid Row 2 -->
-            <LinearLayout
+            <!-- Tip Card 4 -->
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingStart="12dp"
-                android:paddingEnd="12dp"
-                android:layout_marginBottom="16dp">
-
-                <com.google.android.material.card.MaterialCardView
-                    android:layout_width="0dp"
-                    android:layout_height="90dp"
-                    android:layout_weight="1"
-                    android:layout_marginEnd="6dp"
-                    app:cardCornerRadius="14dp"
-                    app:cardBackgroundColor="#1565C0">
-                    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
-                        android:orientation="vertical" android:gravity="center">
-                        <ImageView android:layout_width="32dp" android:layout_height="32dp"
-                            android:src="@drawable/logo" android:tint="#FFFFFF"
-                            android:layout_marginBottom="6dp" />
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="3dp"
+                app:cardBackgroundColor="#FFFFFF">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="14dp"
+                    android:gravity="center_vertical">
+                    <TextView android:layout_width="40dp" android:layout_height="40dp"
+                        android:text="🚶" android:textSize="22sp" android:gravity="center" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="12dp">
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                            android:text="Gynecology" android:textColor="#FFFFFF" android:textSize="11sp"
-                            android:textStyle="bold" />
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
-
-                <com.google.android.material.card.MaterialCardView
-                    android:layout_width="0dp"
-                    android:layout_height="90dp"
-                    android:layout_weight="1"
-                    android:layout_marginEnd="6dp"
-                    app:cardCornerRadius="14dp"
-                    app:cardBackgroundColor="#1565C0">
-                    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
-                        android:orientation="vertical" android:gravity="center">
-                        <ImageView android:layout_width="32dp" android:layout_height="32dp"
-                            android:src="@drawable/logo" android:tint="#FFFFFF"
-                            android:layout_marginBottom="6dp" />
+                            android:text="Jalan Kaki 30 Menit" android:textSize="13sp"
+                            android:textColor="#212121" android:textStyle="bold" android:layout_marginBottom="3dp" />
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                            android:text="Odontology" android:textColor="#FFFFFF" android:textSize="11sp"
-                            android:textStyle="bold" />
+                            android:text="Jalan kaki santai 30 menit tiap hari sudah cukup menjaga kesehatan jantung dan stamina."
+                            android:textSize="11sp" android:textColor="#757575" android:lineSpacingExtra="3dp" />
                     </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
 
-                <com.google.android.material.card.MaterialCardView
-                    android:layout_width="0dp"
-                    android:layout_height="90dp"
-                    android:layout_weight="1"
-                    app:cardCornerRadius="14dp"
-                    app:cardBackgroundColor="#1565C0">
-                    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
-                        android:orientation="vertical" android:gravity="center">
-                        <ImageView android:layout_width="32dp" android:layout_height="32dp"
-                            android:src="@drawable/logo" android:tint="#FFFFFF"
-                            android:layout_marginBottom="6dp" />
+            <!-- Tip Card 5 -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="3dp"
+                app:cardBackgroundColor="#FFFFFF">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="14dp"
+                    android:gravity="center_vertical">
+                    <TextView android:layout_width="40dp" android:layout_height="40dp"
+                        android:text="🧹" android:textSize="22sp" android:gravity="center" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="12dp">
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                            android:text="Oncology" android:textColor="#FFFFFF" android:textSize="11sp"
-                            android:textStyle="bold" />
+                            android:text="Aktif di Rumah &amp; Kebun" android:textSize="13sp"
+                            android:textColor="#212121" android:textStyle="bold" android:layout_marginBottom="3dp" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Kegiatan rumah tangga dan berkebun termasuk aktivitas fisik yang baik untuk tubuh."
+                            android:textSize="11sp" android:textColor="#757575" android:lineSpacingExtra="3dp" />
                     </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
-            </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Tips Istirahat -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="😴 Istirahat &amp; Tidur"
+                android:textSize="14sp"
+                android:textColor="#F57F17"
+                android:textStyle="bold"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="10dp" />
+
+            <!-- Tip Card 6 -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="3dp"
+                app:cardBackgroundColor="#FFFFFF">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="14dp"
+                    android:gravity="center_vertical">
+                    <TextView android:layout_width="40dp" android:layout_height="40dp"
+                        android:text="🌙" android:textSize="22sp" android:gravity="center" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="12dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Tidur 7–8 Jam Setiap Malam" android:textSize="13sp"
+                            android:textColor="#212121" android:textStyle="bold" android:layout_marginBottom="3dp" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Tidur cukup membantu memulihkan tubuh, meningkatkan daya tahan, dan menjaga kesehatan mental."
+                            android:textSize="11sp" android:textColor="#757575" android:lineSpacingExtra="3dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Tips Kesehatan Mental -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🧘 Kesehatan Mental"
+                android:textSize="14sp"
+                android:textColor="#C62828"
+                android:textStyle="bold"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="10dp" />
+
+            <!-- Tip Card 7 -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="3dp"
+                app:cardBackgroundColor="#FFFFFF">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="14dp"
+                    android:gravity="center_vertical">
+                    <TextView android:layout_width="40dp" android:layout_height="40dp"
+                        android:text="🤝" android:textSize="22sp" android:gravity="center" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="12dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Jaga Silaturahmi" android:textSize="13sp"
+                            android:textColor="#212121" android:textStyle="bold" android:layout_marginBottom="3dp" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Berinteraksi sosial dan menjaga hubungan baik dengan tetangga dapat menurunkan stress."
+                            android:textSize="11sp" android:textColor="#757575" android:lineSpacingExtra="3dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Tip Card 8 -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="24dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="3dp"
+                app:cardBackgroundColor="#FFFFFF">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="14dp"
+                    android:gravity="center_vertical">
+                    <TextView android:layout_width="40dp" android:layout_height="40dp"
+                        android:text="🏥" android:textSize="22sp" android:gravity="center" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="12dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Rutin Periksa ke Puskesmas" android:textSize="13sp"
+                            android:textColor="#212121" android:textStyle="bold" android:layout_marginBottom="3dp" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Lakukan pemeriksaan kesehatan rutin minimal 6 bulan sekali meski tidak ada keluhan."
+                            android:textSize="11sp" android:textColor="#757575" android:lineSpacingExtra="3dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
 
         </LinearLayout>
     </ScrollView>
 
-    <!-- Tombol Web Bina Desa -->
-    <Button
-        android:id="@+id/btnWebView"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="8dp"
-        android:text="🌐  Buka Web Bina Desa"
-        android:textSize="13sp"
-        android:textStyle="bold"
-        android:backgroundTint="#0D47A1"
-        android:textColor="#FFFFFF"
-        app:cornerRadius="14dp" />
-
-    <!-- Bottom Nav -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:orientation="horizontal"
-        android:background="#FFFFFF"
-        android:gravity="center"
-        android:elevation="8dp">
-
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="24dp"
-            android:layout_weight="1"
-            android:src="@android:drawable/ic_menu_compass"
-             />
-
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="24dp"
-            android:layout_weight="1"
-            android:src="@android:drawable/ic_menu_send"
-            android:tint="#BDBDBD" />
-
-        <LinearLayout
-            android:id="@+id/btnKembali"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center">
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@android:drawable/ic_media_previous"
-                 />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Kembali"
-                android:textSize="9sp"
-                android:textColor="#1565C0" />
-        </LinearLayout>
-
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="24dp"
-            android:layout_weight="1"
-            android:src="@android:drawable/ic_menu_agenda"
-            android:tint="#BDBDBD" />
-    </LinearLayout>
-
 </LinearLayout>
-
-

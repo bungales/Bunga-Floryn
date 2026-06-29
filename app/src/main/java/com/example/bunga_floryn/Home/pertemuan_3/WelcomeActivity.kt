@@ -1,20 +1,24 @@
 package com.example.bunga_floryn.Home.pertemuan_3
 
+import android.Manifest
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
-import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
 import android.widget.Button
 import android.widget.TextView
-import com.example.bunga_floryn.R
-import com.example.bunga_floryn.Home.pertemuan_2.MainActivity as RumusBangunRuangActivity
+import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
+import com.example.bunga_floryn.AuthActivity
 import com.example.bunga_floryn.Home.pertemuan_4.CustomActivity1
 import com.example.bunga_floryn.Home.pertemuan_4.CustomActivity2
-import com.example.bunga_floryn.AuthActivity
-import com.example.bunga_floryn.Home.pertemuan_5.WebViewActivity
+import com.example.bunga_floryn.R
+import com.example.bunga_floryn.utils.NotificationHelper
+import com.example.bunga_floryn.utils.PermissionHelper
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
+import com.example.bunga_floryn.Home.pertemuan_2.MainActivity as RumusBangunRuangActivity
 
 class WelcomeActivity : AppCompatActivity() {
 
@@ -23,7 +27,20 @@ class WelcomeActivity : AppCompatActivity() {
     private lateinit var btnCustom1: Button
     private lateinit var btnCustom2: Button
     private lateinit var btnLogout: Button
-    private lateinit var btnPertemuan5: Button
+
+    // Launcher untuk request permission notifikasi
+    private val notificationPermissionLauncher =
+        registerForActivityResult(ActivityResultContracts.RequestPermission()) { isGranted ->
+            if (isGranted) {
+                Toast.makeText(this, "Izin notifikasi diberikan", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(
+                    this,
+                    "Izin notifikasi ditolak. Aktifkan di Pengaturan.",
+                    Toast.LENGTH_LONG
+                ).show()
+            }
+        }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,7 +51,7 @@ class WelcomeActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         supportActionBar?.apply {
             title = "Welcome"
-            subtitle = "RuangKu"
+            subtitle = "HealthTrack"
         }
 
         tvUsername = findViewById(R.id.tvUsername)
@@ -42,7 +59,6 @@ class WelcomeActivity : AppCompatActivity() {
         btnCustom1 = findViewById(R.id.btnCustom1)
         btnCustom2 = findViewById(R.id.btnCustom2)
         btnLogout = findViewById(R.id.btnLogout)
-        btnPertemuan5 = findViewById(R.id.btnPertemuan5)
 
         // Ambil username dari SharedPreferences atau Intent
         val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
@@ -51,33 +67,51 @@ class WelcomeActivity : AppCompatActivity() {
             ?: "User"
         tvUsername.text = username
 
-        setupClickListeners(sharedPref)
+        // Minta izin notifikasi saat halaman dibuka (Android 13+)
+        if (PermissionHelper.isNotificationPermissionRequired()) {
+            val permission = Manifest.permission.POST_NOTIFICATIONS
+            if (!PermissionHelper.hasPermission(this, permission)) {
+                PermissionHelper.requestPermission(notificationPermissionLauncher, permission)
+            }
+        }
+
+        setupClickListeners(sharedPref, username)
     }
 
-    private fun setupClickListeners(sharedPref: android.content.SharedPreferences) {
+    private fun setupClickListeners(
+        sharedPref: android.content.SharedPreferences,
+        username: String
+    ) {
         btnRumusBangunRuang.setOnClickListener {
-            val intent = Intent(this, RumusBangunRuangActivity::class.java)
-            intent.putExtra("judul_halaman", "Rumus Bangun Ruang")
-            intent.putExtra("deskripsi", "Hitung luas segitiga dan volume bola")
-            startActivity(intent)
+            startActivity(Intent(this, RumusBangunRuangActivity::class.java).apply {
+                putExtra("judul_halaman", "Rumus Bangun Ruang")
+                putExtra("deskripsi", "Hitung luas segitiga dan volume bola")
+            })
         }
 
         btnCustom1.setOnClickListener {
-            val intent = Intent(this, CustomActivity1::class.java)
-            intent.putExtra("judul_halaman", "Custom Screen 1")
-            intent.putExtra("deskripsi", "Desain Figma dengan gambar ilustrasi kesehatan")
+            // Kirim notifikasi lokal bahwa user membuka Cek Kesehatan
+            val intent = Intent(this, CustomActivity1::class.java).apply {
+                putExtra("judul_halaman", "Cek Kesehatan")
+                putExtra("deskripsi", "Desain Figma dengan gambar ilustrasi kesehatan")
+            }
+            NotificationHelper.showNotification(
+                context = this,
+                title = "Cek Kesehatan",
+                message = "Halo $username, jangan lupa rutin cek kesehatanmu!",
+                intent = Intent(this, CustomActivity1::class.java).apply {
+                    putExtra("judul_halaman", "Cek Kesehatan")
+                    putExtra("deskripsi", "Desain Figma dengan gambar ilustrasi kesehatan")
+                }
+            )
             startActivity(intent)
         }
 
         btnCustom2.setOnClickListener {
-            val intent = Intent(this, CustomActivity2::class.java)
-            intent.putExtra("judul_halaman", "Custom Screen 2")
-            intent.putExtra("deskripsi", "Desain Figma dengan tema olahraga")
-            startActivity(intent)
-        }
-
-        btnPertemuan5.setOnClickListener {
-            startActivity(Intent(this, WebViewActivity::class.java))
+            startActivity(Intent(this, CustomActivity2::class.java).apply {
+                putExtra("judul_halaman", "Jadwal & Tips Sehat")
+                putExtra("deskripsi", "Desain Figma dengan tema olahraga")
+            })
         }
 
         btnLogout.setOnClickListener {
@@ -85,14 +119,13 @@ class WelcomeActivity : AppCompatActivity() {
                 .setTitle("Konfirmasi Logout")
                 .setMessage("Apakah Anda yakin ingin logout?")
                 .setPositiveButton("Ya") { dialog, _ ->
-                    // Hapus SharedPreferences
-                    val editor = sharedPref.edit()
-                    editor.clear()
-                    editor.apply()
+                    sharedPref.edit().clear().apply()
                     dialog.dismiss()
-                    val intent = Intent(this, AuthActivity::class.java)
-                    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-                    startActivity(intent)
+                    startActivity(
+                        Intent(this, AuthActivity::class.java).apply {
+                            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                        }
+                    )
                     finish()
                 }
                 .setNegativeButton("Tidak") { dialog, _ ->

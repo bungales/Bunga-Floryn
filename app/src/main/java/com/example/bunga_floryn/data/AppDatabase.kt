@@ -9,9 +9,12 @@ import com.example.bunga_floryn.data.dao.WargaDao
 import com.example.bunga_floryn.data.entity.NoteEntity
 import com.example.bunga_floryn.data.entity.WargaEntity
 
+import androidx.room.migration.Migration
+import androidx.sqlite.db.SupportSQLiteDatabase
+
 @Database(
     entities = [NoteEntity::class, WargaEntity::class],
-    version = 1
+    version = 2
 )
 abstract class AppDatabase : RoomDatabase() {
 
@@ -21,13 +24,21 @@ abstract class AppDatabase : RoomDatabase() {
     companion object {
         @Volatile private var INSTANCE: AppDatabase? = null
 
+        private val MIGRATION_1_2 = object : Migration(1, 2) {
+            override fun migrate(db: SupportSQLiteDatabase) {
+                db.execSQL("ALTER TABLE notes ADD COLUMN reminderAt INTEGER")
+            }
+        }
+
         fun getInstance(context: Context): AppDatabase {
             return INSTANCE ?: synchronized(this) {
                 Room.databaseBuilder(
                     context.applicationContext,
                     AppDatabase::class.java,
                     "app_database"
-                ).build().also { INSTANCE = it }
+                )
+                    .addMigrations(MIGRATION_1_2)
+                    .build().also { INSTANCE = it }
             }
         }
     }
