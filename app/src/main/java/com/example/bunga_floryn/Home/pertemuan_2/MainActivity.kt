@@ -1,6 +1,5 @@
 package com.example.bunga_floryn.Home.pertemuan_2
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
@@ -8,7 +7,6 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import com.example.bunga_floryn.R
-import com.example.bunga_floryn.Home.pertemuan_5.WebViewActivity
 import com.google.android.material.textfield.TextInputEditText
 import android.widget.TextView
 import kotlin.math.PI
@@ -45,10 +43,6 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<android.widget.Button>(R.id.btn_hitung_segitiga).setOnClickListener { hitungLuasSegitiga() }
         findViewById<android.widget.Button>(R.id.btn_hitung_bola).setOnClickListener { hitungVolumeBola() }
-        findViewById<android.widget.Button>(R.id.btnKembali).setOnClickListener { finish() }
-        findViewById<android.widget.Button>(R.id.btnWebView).setOnClickListener {
-            startActivity(Intent(this, WebViewActivity::class.java))
-        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
