@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
+import com.example.bunga_floryn.About.AboutFragment
 import com.example.bunga_floryn.Home.HomeFragment
 import com.example.bunga_floryn.Note.NoteFragment
 import com.example.bunga_floryn.Profile.ProfileFragment
@@ -31,6 +32,7 @@ class BaseActivity : AppCompatActivity() {
                 R.id.warga -> { replaceFragment(WargaFragment()); true }
                 R.id.profile -> { replaceFragment(ProfileFragment()); true }
                 R.id.settings -> { replaceFragment(SettingsFragment()); true }
+                R.id.about -> { replaceFragment(AboutFragment()); true }
                 else -> false
             }
         }
