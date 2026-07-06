@@ -17,6 +17,7 @@ import com.example.bunga_floryn.Home.pertemuan_4.CustomActivity2
 import com.example.bunga_floryn.Home.pertemuan_5.WebViewActivity
 import com.example.bunga_floryn.Home.pertemuan_9.NinthActivity
 import com.example.bunga_floryn.Home.pertemuan_10.TenthActivity
+import com.example.bunga_floryn.Home.pertemuan_13.ThirteenthActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 
@@ -67,6 +68,9 @@ class HomeFragment : Fragment() {
         }
         binding.btnPertemuan10.setOnClickListener {
             startActivity(Intent(requireContext(), TenthActivity::class.java))
+        }
+        binding.btnPertemuan13.setOnClickListener {
+            startActivity(Intent(requireContext(), ThirteenthActivity::class.java))
         }
         // Load berita fasilitas desa
         val beritaList = BeritaRepository.getBeritaDesa()

@@ -160,12 +160,12 @@
 
             <GridLayout
                 android:layout_width="358dp"
-                android:layout_height="314dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
                 android:layout_marginEnd="12dp"
                 android:layout_marginBottom="16dp"
                 android:columnCount="2"
-                android:rowCount="3">
+                android:rowCount="4">
 
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="0dp"
@@ -376,6 +376,42 @@
                             android:layout_marginTop="4dp"
                             android:fontFamily="@font/inter_variablefont_opsz_wght"
                             android:text="Fasilitas &amp; Kegiatan"
+                            android:textAlignment="center"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="5dp"
+                    app:cardBackgroundColor="#2E7D32"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp">
+
+                    <LinearLayout
+                        android:id="@+id/btnPertemuan13"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="📷"
+                            android:textSize="28sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/inter_variablefont_opsz_wght"
+                            android:text="Camera &amp; QR"
                             android:textAlignment="center"
                             android:textColor="#FFFFFF"
                             android:textSize="12sp"
